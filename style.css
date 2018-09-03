@@ -21,7 +21,7 @@ body {
 /*......background header.....*/
 .head {
     width: 100%;
-    background-image: url('./dist/img/beatrice-apartments-penthouse.jpg');
+    background-image: url('dist/img/beatrice-apartments-penthouse.jpg');
     height: 100%;
     max-height: 72vh;
     background-position: center;
