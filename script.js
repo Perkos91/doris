@@ -1,14 +1,19 @@
 /*..........Toggle menu............*/
 
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
+let mainNav = document.querySelector('.main-nav');
+let navbarToggle = document.querySelector('.menu-toggle');
 
-menuToggle.addEventListener('click', function () {
-    nav.classList.toggle('active');
-    console.log('work good')
-})
+navbarToggle.addEventListener('click', function () {
 
+    if (this.classList.contains('active')) {
+        mainNav.style.display = "none";
+        this.classList.remove('active');
+    } else {
+        mainNav.style.display = "flex";
+        this.classList.add('active');
 
+    }
+});
 
 /*.........Show Slides Gallery...............*/
 
@@ -75,8 +80,8 @@ function showSlides(n) {
 }
 
 
-let mainNav = document.querySelector('.main-nav');
-let navbarToggle = document.getElementById('navbar-toggle');
+// let mainNav = document.querySelector('.main-nav');
+// let navbarToggle = document.getElementById('navbar-toggle');
 
 // navbarToggle.addEventListener('click', function () {
 //     if (this.classList.contains('active')) {

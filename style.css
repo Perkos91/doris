@@ -34,93 +34,85 @@ body {
     /* background-size: cover; */
 }
 
-/*......Logo......*/
-header {
-    background-color: #f9f9f9;
-    padding: 80px;
-    box-sizing: border-box;
+/* ......navigation..... */
+.navbar {
+    font-size: 24px;
 }
 
-header nav {
-    float: right;
-}
-
-header nav ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-header nav ul li {
+.main-nav {
     list-style: none;
+    display: none;
+    flex-direction: column;
 }
 
-header nav ul li a {
-    height: 50px;
-    /* line-height: 50px; */
-    padding: 0 20px;
-    font-size: 24px;
-    color: #02021f;
+.nav-links,
+.logo {
     text-decoration: none;
-    display: block;
+    color: #000;
+    /* font-weight: bold; */
 }
 
-header nav ul li a i {
-    font-size: 24px;
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
 }
 
-header nav ul li a:hover {
-    color: #ffc400;
-}
-
-header nav ul li a i:hover {
-    color: #ffc400;
+.logo {
+    display: inline-block;
+    max-width: 120px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 .menu-toggle {
-    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
     cursor: pointer;
-    display: block;
-    display: none;
-    float: right;
+    font-size: 30px;
 }
 
-@media (max-width: 991px) {
-    header {
-        padding: 0 20px 120px 20px;
-        background-color: #fff;
+.logo img {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 120px;
+        align-items: center;
+    }
+
+    .main-nav {
+        display: flex !important;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
+
+    .nav-links {
+        margin-left: 40px;
+    }
+
+    .log {
+        margin-top: 0;
     }
 
     .menu-toggle {
-        top: -50px;
-        display: block;
-        /* z-index: 2; */
-    }
-
-    header nav {
-        /* display: none; */
-        position: absolute;
-        width: 100%;
-        height: calc(100vh- 50px);
-        top: 490px;
-        left: -100%;
-        /* z-index: 1; */
-        transition: 0.5s;
-    }
-
-    header nav.active {
-        left: 0;
-    }
-
-    header nav ul {
-        display: block;
-        text-align: center;
+        display: none;
     }
 }
 
-/* ......navigation..... */
+/*......logo.......*/
 .logo-image {
     max-width: 120px;
+    display: inline-block;
 }
 
 .logo-image img {
@@ -132,6 +124,10 @@ header nav ul li a i:hover {
 .projects {
     padding: 120px;
     margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
 }
 
 .items_gallery {
