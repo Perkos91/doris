@@ -193,6 +193,10 @@ body {
     background-color: #f9f9f9;
 }
 
+.about p {
+    margin: 2rem 0;
+}
+
 .about img {
     width: 100%;
     max-width: 350px;
@@ -230,10 +234,14 @@ p {
 .port {
     background-color: #fafafa;
     display: none;
-    /* padding: 120px 25%; */
+    padding: 120px 25%;
     flex-direction: column;
     /* text-align: center; */
     background-color: #eee;
+}
+
+.name {
+    text-transform: uppercase;
 }
 
 .active {
