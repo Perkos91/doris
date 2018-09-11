@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--Bootstrap CSS-->
 
     <link rel="stylesheet" href="style.css">
@@ -54,7 +55,7 @@
         <section class="projects" id="projekty">
             <h2 class="heading">Projekty</h2>
             <div class="items_gallery">
-                <a class="gallery-item" href="#item01">
+                <a class="gallery-item" href="#item01" name="item01">
                     <img src="dist/img/projects/elektryczne_studio/1.jpg" alt="">
                     <span class="text-wrapper">
                         <span class="name">EKLEKTYCZNE STUDIO PRZY MYSLIWSKIEJ W KRAKOWIE</span>
@@ -62,36 +63,36 @@
                     </span>
                 </a>
 
-                <a class="gallery-item" href="#item02">
+                <a class="gallery-item" href="#item02" name="item02">
                     <img src="dist/img/projects/dom_w_nowoczesnym_stylu/1.jpg" alt="">
                     <span class="text-wrapper">
                         <span class="name">Dom w nowoczesnym stylu z bawialnią dla dzieci</span>
                         <!-- <span class="desc">Opis</span> -->
                     </span>
                 </a>
-                <a class="gallery-item" href="#item01">
+                <a class="gallery-item" href="#item03" name="item03">
                     <img src="dist/img/projects/Kawaleria_loft_style/1.jpg" alt="">
                     <span class="
                         text-wrapper">
                         <span class="name">Kawaleria loft style</span>
-                        <span class="desc">Opis</span>
+                        <!-- <span class="desc">Opis</span> -->
                     </span>
                 </a>
-                <a class="gallery-item" href="#item01">
+                <a class="gallery-item" href="#item04" name="item04">
                     <img src="dist/img/projects/13m/1.jpg" alt="">
                     <span class="text-wrapper">
                         <span class="name">13m<sup>2</sup></span>
                         <!-- <span class="desc">Opis</span> -->
                     </span>
                 </a>
-                <a class="gallery-item" href="#item01">
+                <a class="gallery-item" href="#item05" name="item05">
                     <img src="dist/img/projects/20.jpg" alt="">
                     <span class="text-wrapper">
-                        <span class="name">Projekt 5</span>
-                        <span class="desc">Opis</span>
+                        <span class="name">DOM W PODKAKOWSKIM GIEBUŁTOWIE</span>
+                        <!-- <span class="desc">Opis</span> -->
                     </span>
                 </a>
-                <a class="gallery-item" href="#item01">
+                <a class="gallery-item" href="#item06" name="item06">
                     <img src="dist/img/projects/21.jpg" alt="">
                     <span class="text-wrapper">
                         <span class="name">Projekt 6</span>
@@ -100,7 +101,43 @@
                 </a>
             </div>
         </section>
-        <div class="port" id="item01">
+        <div id="item01" class="port">
+            <span class="close">
+                <i class="fas fa-times"></i>
+            </span>
+
+            <h1>EKLEKTYCZNE STUDIO PRZY MYSLIWSKIEJ W KRAKOWIE</h1>
+            <p>Eklektyczne, 20 metrowe wnętrze studia zaprojektowane zostało dla potrzeb singla lubiącego mocne,
+                kontrastowe zestawienia kolorystyczne.
+                Wygaszone bordo świetnie harmonizuje z czernią i fornirem. Swojskiego klimatu w salonie dodaje
+                tapeta
+                Frezo nawiązująca swoją stylistyką do lat 60, która świetnie komponuje się z krzesłami i innymi
+                meblami
+                tapicerowanymi . Matowe, akrylowe powierzchnie frontów kuchennych ułatwiają utrzymanie mebli
+                kuchennych
+                w nienagannym stanie. Nieszablonowe zastosowanie w części kuchennej i jadalnianej mikrocementu,
+                świetnie imitującego beton doskonale przełamuje całość tradycyjnego wnętrza, jednocześnie wpisując
+                się
+                we współczesne trendy wnętrzarskie. </p>
+            <div class="grid">
+                <div class="item01">
+                    <img src="dist/img/projects/elektryczne_studio/1.jpg" class="image ">
+                </div>
+                <div class="item01">
+                    <img src="dist/img/projects/elektryczne_studio/2.jpg " class="image ">
+                </div>
+                <div class="item01">
+                    <img src="dist/img/projects/elektryczne_studio/3.jpg " class="image ">
+                </div>
+                <div class="item01">
+                    <img src="dist/img/projects/elektryczne_studio/4.jpg" class="image">
+                </div>
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+
+            </div>
+        </div>
+        <div id="item02" class="port">
             <span class="close">
                 <i class="fas fa-times"></i>
             </span>
@@ -114,119 +151,212 @@
                 pomieszczeń, w tym bawialni, gdzie połączyłyśmy ze sobą ciepły, wygaszony granat ze sklejką. Ścianka
                 wspinaczkowa we własnym m, to dopiero frajda dla małych mieszkańców! W tym wnętrzu wyobraźnia
                 najmłodszych pozostaje nieograniczona.</p>
-            <!-- <div class="galery"> -->
             <div class="grid">
-                <div class="cell fade">
-                    <img src="dist/img/projects/elektryczne_studio/1.jpg" class="image ">
+                <div class="item02">
+                    <img src="dist/img/projects/dom_w_nowoczesnym_stylu/1.jpg" class="image ">
                 </div>
-                <div class="cell fade">
-                    <img src="dist/img/projects/elektryczne_studio/2.jpg " class="image ">
+                <div class="item02">
+                    <img src="dist/img/projects/dom_w_nowoczesnym_stylu/2.jpg" class="image ">
                 </div>
-                <div class="cell fade">
-                    <img src="dist/img/projects/elektryczne_studio/3.jpg " class="image ">
+                <div class="item02">
+                    <img src="dist/img/projects/dom_w_nowoczesnym_stylu/3.jpg" class="image ">
                 </div>
-                <div class="cell">
-                    <img src="dist/img/projects/elektryczne_studio/4.jpg" class="image ">
+                <div class="item02">
+                    <img src="dist/img/projects/dom_w_nowoczesnym_stylu/4.jpg" class="image ">
+                </div>
+                <div class="item02">
+                    <img src="dist/img/projects/dom_w_nowoczesnym_stylu/5.jpg" class="image ">
+                </div>
+                <div class="item02">
+                    <img src="dist/img/projects/dom_w_nowoczesnym_stylu/6.jpg" class="image ">
+                </div>
+                <div class="item02">
+                    <img src="dist/img/projects/dom_w_nowoczesnym_stylu/7.jpg" class="image ">
+                </div>
+                <div class="item02">
+                    <img src="dist/img/projects/dom_w_nowoczesnym_stylu/8.jpg" class="image ">
+                </div>
+                <div class="item02">
+                    <img src="dist/img/projects/dom_w_nowoczesnym_stylu/9.jpg" class="image ">
+                </div>
+                <div class="item02">
+                    <img src="dist/img/projects/dom_w_nowoczesnym_stylu/10.jpg" class="image ">
                 </div>
 
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
 
             </div>
-            <div class="port" id="item02">
-                <span class="close">
-                    <i class="fas fa-times"></i>
-                </span>
-
-                <h1>EKLEKTYCZNE STUDIO PRZY MYSLIWSKIEJ W KRAKOWIE</h1>
-                <p>Eklektyczne, 20 metrowe wnętrze studia zaprojektowane zostało dla potrzeb singla lubiącego mocne,
-                    kontrastowe zestawienia kolorystyczne.
-                    Wygaszone bordo świetnie harmonizuje z czernią i fornirem. Swojskiego klimatu w salonie dodaje
-                    tapeta
-                    Frezo nawiązująca swoją stylistyką do lat 60, która świetnie komponuje się z krzesłami i innymi
-                    meblami
-                    tapicerowanymi . Matowe, akrylowe powierzchnie frontów kuchennych ułatwiają utrzymanie mebli
-                    kuchennych
-                    w nienagannym stanie. Nieszablonowe zastosowanie w części kuchennej i jadalnianej mikrocementu,
-                    świetnie imitującego beton doskonale przełamuje całość tradycyjnego wnętrza, jednocześnie wpisując
-                    się
-                    we współczesne trendy wnętrzarskie. </p>
-                <!-- <div class="galery"> -->
-                <div class="grid">
-                    <div class="cell fade">
-                        <img src="dist/img/projects/dom_w_nowoczesnym_stylu/1.jpg" class="image ">
-                    </div>
-                    <div class="cell fade">
-                        <img src="dist/img/projects/dom_w_nowoczesnym_stylu/2.jpg" class="image ">
-                    </div>
-                    <div class="cell fade">
-                        <img src="dist/img/projects/dom_w_nowoczesnym_stylu/3.jpg" class="image ">
-                    </div>
-                    <div class="cell">
-                        <img src="dist/img/projects/dom_w_nowoczesnym_stylu/4.jpg" class="image ">
-                    </div>
-                    <div class="cell">
-                        <img src="dist/img/projects/dom_w_nowoczesnym_stylu/5.jpg" class="image ">
-                    </div>
-                    <div class="cell">
-                        <img src="dist/img/projects/dom_w_nowoczesnym_stylu/6.jpg" class="image ">
-                    </div>
-                    <div class="cell">
-                        <img src="dist/img/projects/dom_w_nowoczesnym_stylu/7.jpg" class="image ">
-                    </div>
-                    <div class="cell">
-                        <img src="dist/img/projects/dom_w_nowoczesnym_stylu/8.jpg" class="image ">
-                    </div>
-                    <div class="cell">
-                        <img src="dist/img/projects/dom_w_nowoczesnym_stylu/9.jpg" class="image ">
-                    </div>
-                    <div class="cell">
-                        <img src="dist/img/projects/dom_w_nowoczesnym_stylu/10.jpg" class="image ">
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                </div>
-            </div>
-            <section id="onas" class="about">
-                <h2>O nas</h2>
-                <img src="dist/img/doris.jpg " alt="Doris ">
-                <div class="description">
-                    <p><span class="akapit">DORIS DESIGN SERVICES</span> to autorska pracowania architektury wnętrz
-                        świadcząca usługi zarówno dla
-                        klientów
-                        indywidualnych jak firm. Projektowanie wnętrz jest naszą pasją, nie istnieją dla nas
-                        wnętrza
-                        niemożliwe
-                        do zaprojektowania, a największa radość sprawia nam zadowolenie Klienta. Każdy projekt
-                        traktujemy
-                        indywidualnie, priorytetowo traktując potrzeby naszych klientów . W projekty wkładamy serce
-                        i
-                        zaangażowanie tak, by zaprojektować przestrzeń unikatową, zaskakującą a jednocześnie będącą
-                        „domem”.</p>
-
-                    <p>Zapewniamy opiekę nad projektem w każdej fazie realizacji. Czerpiemy inspirację z naszych
-                        dalekich i
-                        bliskich podróży. Aktywnie poszukujemy nowych trendów i ciekawych rozwiązań, biorąc udział w
-                        targach
-                        oraz wystawach designu w Europie i na Świecie.</p>
-                    <p>Specjalizujemy się również w visual merchandisingu, co ułatwia pracę nad projektami dla firm,
-                        mającymi
-                        na celu efektywny wzrost sprzedaży </p>
-                </div>
-            </section>
-            <section class="contact " id="kontakt">
-                <h2>Kontakt</h2>
-
-                <h3>telefon:</h3>
-                <p>665-555-555</p>
-
-                <h3>e-mail</h3>
-                <p>mail@mail.com</p>
-
-            </section>
         </div>
-        <script src="script.js "></script>
+        <div id="item03" class="port">
+            <span class="close">
+                <i class="fas fa-times"></i>
+            </span>
+
+            <h1>Kawalerka Loft Style</h1>
+            <p>Męska kawalerka z kolorowymi akcentami to wnętrze na Płaszowie, z widokiem z 10 piętra. Jasnoszare
+                panele podłogowe są doskonałym rozwiązaniem dla osób, które nie lubią dominacji dębowej podłogi we
+                wnętrzu. Konstrukcje z lakierowanych profili stalowych świetnie oddzielają poszczególne strefy
+                mieszkania. W zabudowie kuchennej połączyłyśmy drewnopodobne fronty z inoxem w odcieniu złota na
+                szafkach wiszących i blacie jadalnianym. Szynoprzewody doświetlają całość wnętrza i łączą strefę kuchni
+                z salonem. Z racji tego, że w mieszkaniu udało nam się wygospodarować mikro garderobę, meble w salonie
+                zbudowane są z konstrukcji stalowej z kilkoma półkami, które zagospodarowałyśmy roślinami. Lustro
+                zamontowane nad łóżkiem doskonale sprawdza się w swojej roli i powiększa przestrzeń. </p>
+            <div class="grid">
+                <div class="item03">
+                    <img src="dist/img/projects/Kawaleria_loft_style/1.jpg" class="image ">
+                </div>
+                <div class="item03">
+                    <img src="dist/img/projects/Kawaleria_loft_style/2.jpg" class="image ">
+                </div>
+                <div class="item03">
+                    <img src="dist/img/projects/Kawaleria_loft_style/3.jpg" class="image ">
+                </div>
+                <div class="item03">
+                    <img src="dist/img/projects/Kawaleria_loft_style/4.jpg" class="image ">
+                </div>
+                <div class="item03">
+                    <img src="dist/img/projects/Kawaleria_loft_style/5.jpg" class="image ">
+                </div>
+                <div class="item03">
+                    <img src="dist/img/projects/Kawaleria_loft_style/6.jpg" class="image ">
+                </div>
+
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+
+            </div>
+        </div>
+        <div id="item04" class="port">
+            <span class="close">
+                <i class="fas fa-times"></i>
+            </span>
+
+            <h1>13M<sup>2</sup></h1>
+            <p>Mikro studio na trzynastu metrach kwadratowych? Z aneksem kuchennym, łazienką i sypialnią?? Oczywiście!
+                W minimalistycznej przestrzeni udało się nam wygospodarować miejsce do jedzenia, a nawet osobne biurko
+                do pracy. Nowocześnie wykończone meble dodają przestrzeni oraz lekkości całemu wnętrzu. Antresola to
+                idealne miejsce odpoczynku, z miejscem dla książek oraz możliwością podłączenia telewizora.
+                Funkcjonalnością niczym nie ustępuje klasycznej sypialni. Efektywne zagospodarowanie korytarza
+                pozwoliło przekształcić jego część w garderobę. Łazienka stylem nawiązuje do kamienicy, której częścią
+                jest mieszkanie. Płytki drewnopodobne z charakterystycznym wzorem świetnie komponują się ze spiekami
+                imitującymi stare ściany. Spiek to doskonały materiał pozwalający na oszczędzenie miejsca we wnętrzach
+                gdzie liczy się każdy centymetr. Dodatkową jego zaletą jest minimalna ilość fug użytych w łączeniach.</p>
+            <div class="grid">
+                <div class="item04">
+                    <img src="dist/img/projects/13m/1.jpg" class="image ">
+                </div>
+                <div class="item04">
+                    <img src="dist/img/projects/13m/2.jpg" class="image ">
+                </div>
+                <div class="item04">
+                    <img src="dist/img/projects/13m/3.jpg" class="image ">
+                </div>
+                <div class="item04">
+                    <img src="dist/img/projects/13m/4.jpg" class="image ">
+                </div>
+                <div class="item04">
+                    <img src="dist/img/projects/13m/4.jpg" class="image ">
+                </div>
+                <div class="item04">
+                    <img src="dist/img/projects/13m/a.jpg" class="image ">
+                </div>
+                <div class="item04">
+                    <img src="dist/img/projects/13m/b.jpg" class="image ">
+                </div>
+                <div class="item04">
+                    <img src="dist/img/projects/13m/c.jpg" class="image ">
+                </div>
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+
+            </div>
+        </div>
+        <div id="item05" class="port">
+            <span class="close">
+                <i class="fas fa-times"></i>
+            </span>
+
+            <h1>DOM W PODKAKOWSKIM GIEBUŁTOWIE</h1>
+            <p>Salon o wysokości przekraczającej 7 metrów to gratka dla geometrycznych form równoważonych minimalizmem.
+                Oryginalna balustrada cienkich stalowych schodów, które prowadzą do prywatnych pokoi przez wzorzystą
+                antresolę jest ledwie zajawką wnętrza całego domu. Drewniane belki u sufitu stały się dla nas
+                inspiracją do zaprojektowania ciężkich drzwi gabinetowych z tłoczeniem, a także do wykończenia
+                antresoli od spodu fornirem przełamującym surowość wnętrza. Kolor regału i foteli rozbija monotonną
+                szarość, którą uwielbiają przyszli mieszkańcy domu. Minimalistyczna zabudowa kominka w salonie swoją
+                strzelistością podkreśla jego wysokość, podobnie jak przestrzenne lampy zwisające nad częścią do
+                spotkań towarzyskich. Lewa ściana wykończona została w całości fornirem kamiennym dopełniając równowagi
+                całości 50 metrowego salonu. </p>
+            <div class="grid">
+                <div class="item05">
+                    <img src="dist/img/projects/dom_w_podkrakowskim_giebultowie/A.jpg" class="image ">
+                </div>
+                <div class="item05">
+                    <img src="dist/img/projects/dom_w_podkrakowskim_giebultowie/B.jpg" class="image ">
+                </div>
+                <div class="item05">
+                    <img src="dist/img/projects/dom_w_podkrakowskim_giebultowie/C.jpg" class="image ">
+                </div>
+                <div class="item05">
+                    <img src="dist/img/projects/dom_w_podkrakowskim_giebultowie/D.jpg" class="image ">
+                </div>
+                <div class="item05">
+                    <img src="dist/img/projects/dom_w_podkrakowskim_giebultowie/E.jpg" class="image ">
+                </div>
+                <div class="item05">
+                    <img src="dist/img/projects/dom_w_podkrakowskim_giebultowie/F.jpg" class="image ">
+                </div>
+                <div class="item05">
+                    <img src="dist/img/projects/dom_w_podkrakowskim_giebultowie/G.jpg" class="image ">
+                </div>
+                <div class="item05">
+                    <img src="dist/img/projects/dom_w_podkrakowskim_giebultowie/H.jpg" class="image ">
+                </div>
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+
+            </div>
+        </div>
+        <section id="onas" class="about">
+            <h2>O nas</h2>
+            <img src="dist/img/doris.jpg " alt="Doris ">
+            <div class="description">
+                <p><span class="akapit">DORIS DESIGN SERVICES</span> to autorska pracowania architektury wnętrz
+                    świadcząca usługi zarówno dla
+                    klientów
+                    indywidualnych jak firm. Projektowanie wnętrz jest naszą pasją, nie istnieją dla nas
+                    wnętrza
+                    niemożliwe
+                    do zaprojektowania, a największa radość sprawia nam zadowolenie Klienta. Każdy projekt
+                    traktujemy
+                    indywidualnie, priorytetowo traktując potrzeby naszych klientów . W projekty wkładamy serce
+                    i
+                    zaangażowanie tak, by zaprojektować przestrzeń unikatową, zaskakującą a jednocześnie będącą
+                    „domem”.</p>
+
+                <p>Zapewniamy opiekę nad projektem w każdej fazie realizacji. Czerpiemy inspirację z naszych
+                    dalekich i
+                    bliskich podróży. Aktywnie poszukujemy nowych trendów i ciekawych rozwiązań, biorąc udział w
+                    targach
+                    oraz wystawach designu w Europie i na Świecie.</p>
+                <p>Specjalizujemy się również w visual merchandisingu, co ułatwia pracę nad projektami dla firm,
+                    mającymi
+                    na celu efektywny wzrost sprzedaży </p>
+            </div>
+        </section>
+        <section class="contact " id="kontakt">
+            <h2>Kontakt</h2>
+
+            <h3>telefon:</h3>
+            <p>665-555-555</p>
+
+            <h3>e-mail</h3>
+            <p>mail@mail.com</p>
+
+        </section>
+    </div>
+    <script src="script.js "></script>
 </body>
 
 </html>
