@@ -40,6 +40,7 @@ function startSlide(id) {
 function slideLeft() {
     reset();
     sliderImages[current - 1].style.display = "block";
+    current--;
 }
 
 // show next 
