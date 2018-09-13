@@ -142,12 +142,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 52px;
+    padding-bottom: 32px;
 }
 
 .gallery-item {
     width: 554px;
-    height: 310px;
+    height: 312px;
     /* margin: 10px; */
     text-decoration: none;
 }
@@ -244,7 +244,7 @@ h1 {
 
 h2 {
     font-size: 32px;
-    padding: 20px;
+    padding-bottom: 40px;
 }
 
 p {
@@ -253,11 +253,13 @@ p {
 
 /*.....galery.....*/
 .port {
-    background-color: #fafafa;
+    background-color: #3b3a38;
     display: none;
     flex-direction: column;
-    /* text-align: center; */
-    background-color: #eee;
+}
+
+.port p {
+    padding-bottom: 30px;
 }
 
 .name {
