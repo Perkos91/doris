@@ -6,7 +6,7 @@
 
 body {
     background-color: #eee;
-    color: #434344;
+    color: #fff;
     font-family: "Lato", sans-serif;
     font-weight: 400;
 }
@@ -34,6 +34,7 @@ body {
 /* ......navigation..... */
 .navbar {
     font-size: 24px;
+    background-color: #fff;
 }
 
 .main-nav {
@@ -46,7 +47,6 @@ body {
 .logo {
     text-decoration: none;
     color: #000;
-    /* font-weight: bold; */
 }
 
 .main-nav li {
@@ -130,6 +130,7 @@ body {
 /*......Projekty......*/
 .projects {
     padding: 120px 0;
+    background-color: #3b3a38;
     /* margin: 0 auto; */
 }
 
@@ -141,6 +142,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 52px;
 }
 
 .gallery-item {
@@ -196,24 +198,30 @@ body {
 .about {
     padding: 120px 0;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #fff;
+}
+
+.about h2 {
+    color: #3b3a38;
 }
 
 .about p {
-    margin: 2rem 0;
+    padding-top: 10px;
+    color: #3b3a38;
 }
 
 .about img {
     width: 100%;
     max-width: 350px;
     height: auto;
+    padding-bottom: 30px;
 }
 
 /*....Kontakt....*/
 .contact {
     padding: 120px 0;
     text-align: center;
-    background-color: #eee;
+    background-color: #3b3a38;
 }
 
 .contact h3 {
@@ -222,7 +230,7 @@ body {
 
 /*....Tekst.....*/
 .description {
-    /* padding: 10px 120px; */
+    padding: 10px 20%;
     text-align: center;
 }
 
@@ -236,13 +244,11 @@ h1 {
 
 h2 {
     font-size: 32px;
-    margin: 2rem 0;
+    padding: 20px;
 }
 
 p {
-    margin: 0;
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-size: 18px;
 }
 
 /*.....galery.....*/
