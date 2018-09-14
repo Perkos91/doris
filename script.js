@@ -134,15 +134,18 @@ close.forEach(c => {
         console.log(this);
     })
 });
-// close.addEventListener('click', function () {
-//     console.log(this);
-//     item.forEach(items => {
-//         items.style.display = "none";
-//         items.classList.remove('active');
-//     });
-//     links.forEach(link => {
-//         link.classList.remove('active');
-//     });
-//     projects.classList.remove('hidde');
-//     console.log(this);
-// })
+
+//..............Smooth Scrolling....................
+
+$(document).ready(function () {
+    var scrollLink = $('.scroll');
+
+    // Smooth scrolling
+
+    scrollLink.click(function (e) {
+        e.preventDefault();
+        $('body, html').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 1000)
+    })
+})
