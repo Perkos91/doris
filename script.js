@@ -139,8 +139,6 @@ close.forEach(c => {
 
 $(document).ready(function () {
     const scrollLink = $('.scroll');
-    console.log(scrollLink);
-
     // Smooth scrolling
 
     scrollLink.click(function (e) {
@@ -159,7 +157,7 @@ const arrowUp = document.getElementById('arrow-up');
 
 function scrollUp(arrow) {
     console.log(document.body.scrollTop)
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
         arrow.style.display = "block";
     } else {
         arrow.style.display = "none";
@@ -172,8 +170,8 @@ $("#arrow-up").click(function (e) {
         scrollTop: 0
     }, 1000);
     return false;
-})
+});
 
 window.onscroll = function () {
-    scrollUp(arrowUp)
+    scrollUp(arrowUp);
 };
