@@ -7,8 +7,10 @@
 body {
     background-color: #eee;
     color: #fff;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-family: 'Jaapokki', sans-serif;
+    /* font-weight: 400; */
+    /* font-style: italic; */
+
 }
 
 .container {
@@ -34,10 +36,10 @@ body {
 
 /*......background header........*/
 .head {
-    background-image: url('dist/img/stronat_tytulowa4.jpg');
+    background-image: url('dist/img/doris-background.jpg');
     background-size: 100%;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     /* max-height: 87vh; */
     background-position: center;
     background-repeat: no-repeat;
@@ -71,10 +73,11 @@ body {
 
 .logo {
     display: inline-block;
-    max-width: 120px;
+    max-width: 500px;
     margin-top: 10px;
     margin-left: 20px;
 }
+
 
 .menu-toggle {
     position: absolute;
@@ -146,6 +149,7 @@ body {
 .projects {
     padding: 120px 0;
     background-color: #3b3a38;
+    ?
     /* margin: 0 auto; */
 }
 
@@ -226,6 +230,7 @@ body {
 }
 
 .about img {
+    margin: 0 auto;
     width: 100%;
     max-width: 350px;
     height: auto;
@@ -246,7 +251,7 @@ body {
 /*....Tekst.....*/
 .description {
     padding: 10px 20%;
-    text-align: center;
+    text-align: justify;
 }
 
 .akapit {
