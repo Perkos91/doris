@@ -66,13 +66,6 @@ arrowLeft.forEach(prev => {
         slideLeft();
     })
 });
-// arrowLeft.addEventListener("click", function () {
-//     if (current === 0) {
-//         current = sliderImages.length;
-
-//     }
-//     slideLeft();
-// })
 
 // next 
 arrowRight.forEach(next => {
@@ -83,15 +76,6 @@ arrowRight.forEach(next => {
         slideRight();
     })
 });
-// arrowRight.addEventListener("click", function () {
-//     if (current === sliderImages.length - 1) {
-//         current = -1;
-//     }
-//     slideRight();
-// });
-
-// startSlide();
-
 
 
 
@@ -113,7 +97,7 @@ Array.from(links).forEach(link => {
             this.classList.remove('active');
         } else {
             console.log(this.name)
-            itemID.style.display = "flex";
+            itemID.style.display = "grid";
             this.classList.add('active');
             projects.classList.add('hidde');
             startSlide(this.name);
@@ -174,4 +158,17 @@ $("#arrow-up").click(function (e) {
 
 window.onscroll = function () {
     scrollUp(arrowUp);
+    // changeBackground(hederColor);
 };
+
+
+// ...........Show / Hide background nav..............
+// const hederColor = document.querySelector('.navbar');
+
+// function changeBackground(header) {
+//     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+//         header.classList.add(`navbar-color`)
+//     } else {
+//         header.classList.remove(`navbar-color`)
+//     }
+// }
