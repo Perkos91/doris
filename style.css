@@ -5,7 +5,7 @@
 }
 
 body {
-    color: #fff;
+    color: #000;
     font-family: 'Jaapokki', sans-serif;
     /* font-weight: 400; */
     /* font-style: italic; */
@@ -99,7 +99,7 @@ body {
 /*......Projekty......*/
 .projects {
     padding: 120px 0;
-    background-color: #3b3a38;
+    background-color: #fff;
     /* margin: 0 auto; */
 }
 
@@ -289,7 +289,7 @@ p {
     height: auto;
     display: flex;
     position: relative;
-    margin: auto;
+    margin: auto 0;
 }
 
 .grid img {
@@ -359,12 +359,14 @@ p {
 
 @media only screen and (min-width: 769px) {
     .navbar {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         padding-bottom: 0;
         height: 120px;
         align-items: center;
-        background-color: rgba(255, 255, 255, 1)
+        background-color: rgba(255, 255, 255, 0.3);
+        position: fixed;
     }
 
     /* .navbar-color {
@@ -459,6 +461,30 @@ p {
         font-size: 18px;
     }
 
+    /*...............Infromation.................*/
+    .information {
+        background-color: #F4F4F6;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 120px 0 120px 0;
+        justify-items: center;
+    }
+
+    .information h2 {
+        text-align: center;
+    }
+
+    .info-group {
+        padding: 12px;
+
+    }
+
+    .info {
+        padding: 10px;
+        font-size: 50px;
+        text-align: center;
+    }
+
     /*.....galery.....*/
     .port {
         grid-template-areas:
@@ -466,6 +492,11 @@ p {
             "header header header"
             "des gallery gallery"
 
+    }
+
+    .des {
+        grid-area: des;
+        display: block;
     }
 
     /*......galery.....*/
@@ -478,9 +509,6 @@ p {
         margin: auto;
     }
 
-    .grid img {
-        vertical-align: middle;
-    }
 
     .image {
         max-width: 100%;

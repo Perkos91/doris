@@ -33,7 +33,7 @@ function startSlide(id) {
     sliderImages = document.querySelectorAll(`.${id}`);
     console.log(sliderImages);
     reset();
-    sliderImages[0].style.display = "block";
+    sliderImages[0].style.display = "grid";
 }
 
 // Show prev 
@@ -172,3 +172,14 @@ window.onscroll = function () {
 //         header.classList.remove(`navbar-color`)
 //     }
 // }
+
+//..............Hid / Show description in gallery.................
+
+
+// $(document).ready(function () {
+//     $('.prev').click(function () {
+//         $(".des").fadeToggle(3000);
+
+//     })
+
+// });
