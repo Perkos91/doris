@@ -237,15 +237,10 @@ p {
 /*...................Project item.......................*/
 .port {
     padding-bottom: 85px;
-    background-color: #3b3a38;
+    background-color: rgba(255, 255, 255, 0);
     display: none;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-        ". . close"
-        "header header header"
-        "button . ."
-        "des des des"
-        "gallery gallery gallery"
+    flex-direction: column;
+
 
 }
 
@@ -276,13 +271,21 @@ p {
     padding: 0 10px 0 10px;
 }
 
-.description-button {
-    grid-area: button;
+.description-btn {
+    align-self: flex-start;
+    padding: 12px;
+    font-size: 30px;
+    display: inline;
+    cursor: pointer;
+    transition: display 0.5s linear;
+}
+
+.hide-btn {
+    display: none;
 }
 
 .close {
-    /* align-self: flex-end; */
-    grid-area: close;
+    align-self: flex-end;
     justify-self: end;
     /* position: absolute; */
     /* top: 0px; */
@@ -496,25 +499,20 @@ p {
 
     /*.................Project item....................*/
     .port {
-        grid-template-areas:
-            ". . close"
-            "header header header"
-            "des gallery gallery"
-
+        /* flex-direction: row; */
     }
 
-    .des {
-        grid-area: des;
-        display: block;
-    }
+    .des {}
 
     /*......galery.....*/
     .grid {
         grid-area: gallery;
-        width: 100%;
+        max-width: 1000px;
         height: auto;
         display: flex;
         position: relative;
+        justify-content: center;
+        flex-direction: column;
         margin: auto;
     }
 
@@ -530,6 +528,7 @@ p {
 
     .prev,
     .next {
+        align-self: flex-start;
         cursor: pointer;
         position: absolute;
         top: 50%;

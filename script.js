@@ -40,6 +40,7 @@ function startSlide(id) {
 function slideLeft() {
     reset();
     sliderImages[current - 1].style.display = "block";
+    itemDescription.classList.add(`hide-btn`);
     current--;
 }
 
@@ -47,6 +48,7 @@ function slideLeft() {
 function slideRight() {
     reset();
     sliderImages[current + 1].style.display = "block";
+    itemDescription.classList.add(`hide-btn`);
     current++;
     // console.log('error')
     // } else {
@@ -97,7 +99,7 @@ Array.from(links).forEach(link => {
             this.classList.remove('active');
         } else {
             console.log(this.name)
-            itemID.style.display = "grid";
+            itemID.style.display = "flex";
             this.classList.add('active');
             projects.classList.add('hidde');
             startSlide(this.name);
@@ -183,3 +185,13 @@ function changeBackground(header) {
 //     })
 
 // });
+
+const descriptionBtn = document.querySelector('.description-btn');
+const itemDescription = document.querySelector('.item-des')
+
+descriptionBtn.addEventListener('click', function () {
+    console.log('work');
+    const des = document.querySelector('.item-des');
+    // des.style.display = 'none'
+    des.classList.toggle(`hide-btn`);
+});
