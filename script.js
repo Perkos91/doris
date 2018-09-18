@@ -33,7 +33,7 @@ function startSlide(id) {
     sliderImages = document.querySelectorAll(`.${id}`);
     console.log(sliderImages);
     reset();
-    sliderImages[0].style.display = "grid";
+    sliderImages[0].style.display = "flex";
 }
 
 // Show prev 
@@ -158,20 +158,20 @@ $("#arrow-up").click(function (e) {
 
 window.onscroll = function () {
     scrollUp(arrowUp);
-    // changeBackground(hederColor);
+    changeBackground(hederColor);
 };
 
 
 // ...........Show / Hide background nav..............
-// const hederColor = document.querySelector('.navbar');
+const hederColor = document.querySelector('.navbar');
 
-// function changeBackground(header) {
-//     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-//         header.classList.add(`navbar-color`)
-//     } else {
-//         header.classList.remove(`navbar-color`)
-//     }
-// }
+function changeBackground(header) {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        header.classList.add(`navbar-color`)
+    } else {
+        header.classList.remove(`navbar-color`)
+    }
+}
 
 //..............Hid / Show description in gallery.................
 

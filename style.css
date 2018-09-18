@@ -24,14 +24,18 @@ body {
 
 /*......background header........*/
 .head {
-    background-image: url('dist/img/doris-background.jpg');
+    /* background-image: url('dist/img/doris-background.jpg');
     background-size: 100%;
     width: 100%;
-    height: 90vh;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+    background: url('dist/img/doris-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
 }
 
 /* ......navigation..... */
@@ -230,7 +234,7 @@ p {
 }
 
 
-/*.....galery.....*/
+/*...................Project item.......................*/
 .port {
     padding-bottom: 85px;
     background-color: #3b3a38;
@@ -239,6 +243,7 @@ p {
     grid-template-areas:
         ". . close"
         "header header header"
+        "button . ."
         "des des des"
         "gallery gallery gallery"
 
@@ -269,6 +274,10 @@ p {
     grid-area: des;
     text-align: justify;
     padding: 0 10px 0 10px;
+}
+
+.description-button {
+    grid-area: button;
 }
 
 .close {
@@ -365,13 +374,13 @@ p {
         padding-bottom: 0;
         height: 120px;
         align-items: center;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(54, 53, 51, 0);
         position: fixed;
     }
 
-    /* .navbar-color {
-        background-color: rgba(255, 255, 255, 1)
-    } */
+    .navbar-color {
+        background-color: rgba(54, 53, 51, 0.4);
+    }
 
     .main-nav {
         display: flex !important;
@@ -485,7 +494,7 @@ p {
         text-align: center;
     }
 
-    /*.....galery.....*/
+    /*.................Project item....................*/
     .port {
         grid-template-areas:
             ". . close"
