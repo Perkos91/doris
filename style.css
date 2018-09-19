@@ -6,7 +6,7 @@
 
 body {
     color: #000;
-    font-family: 'Jaapokki', sans-serif;
+    font-family: 'Armata', sans-serif;
     /* font-weight: 400; */
     /* font-style: italic; */
 
@@ -40,7 +40,7 @@ body {
 
 /* ......navigation..... */
 .navbar {
-    font-size: 24px;
+    font-size: 20px;
     background-color: #fff;
 }
 
@@ -465,12 +465,12 @@ p {
     }
 
     h2 {
-        font-size: 32px;
+        font-size: 44px;
         padding-bottom: 40px;
     }
 
     p {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     /*...............Infromation.................*/
