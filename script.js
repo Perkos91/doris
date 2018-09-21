@@ -49,6 +49,7 @@ function slideRight() {
     reset();
     sliderImages[current + 1].style.display = "block";
     itemDescription.classList.add(`hide-btn`);
+    gallery.style.width = "100%"
     current++;
     // console.log('error')
     // } else {
@@ -99,7 +100,7 @@ Array.from(links).forEach(link => {
             this.classList.remove('active');
         } else {
             console.log(this.name)
-            itemID.style.display = "flex";
+            itemID.style.display = "block";
             this.classList.add('active');
             projects.classList.add('hidde');
             startSlide(this.name);
@@ -187,7 +188,8 @@ function changeBackground(header) {
 // });
 
 const descriptionBtn = document.querySelector('.description-btn');
-const itemDescription = document.querySelector('.item-des')
+const itemDescription = document.querySelector('.item-des');
+const gallery = document.querySelector('.grid');
 
 descriptionBtn.addEventListener('click', function () {
     console.log('work');
