@@ -40,17 +40,16 @@ function startSlide(id) {
 function slideLeft() {
     reset();
     sliderImages[current - 1].style.display = "block";
-    itemDescription.classList.add(`hide-btn`);
     current--;
+    $(".description-project").hide(500);
 }
 
 // show next 
 function slideRight() {
     reset();
     sliderImages[current + 1].style.display = "block";
-    itemDescription.classList.add(`hide-btn`);
-    gallery.style.width = "100%"
     current++;
+    $(".description-project").hide(500);
     // console.log('error')
     // } else {
     //     current = 0;
@@ -100,7 +99,7 @@ Array.from(links).forEach(link => {
             this.classList.remove('active');
         } else {
             console.log(this.name)
-            itemID.style.display = "block";
+            itemID.style.display = "flex";
             this.classList.add('active');
             projects.classList.add('hidde');
             startSlide(this.name);
@@ -161,20 +160,20 @@ $("#arrow-up").click(function (e) {
 
 window.onscroll = function () {
     scrollUp(arrowUp);
-    changeBackground(hederColor);
+    // changeBackground(hederColor);
 };
 
 
-// ...........Show / Hide background nav..............
-const hederColor = document.querySelector('.navbar');
+// // ...........Show / Hide background nav..............
+// const hederColor = document.querySelector('.navbar');
 
-function changeBackground(header) {
-    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-        header.classList.add(`navbar-color`)
-    } else {
-        header.classList.remove(`navbar-color`)
-    }
-}
+// function changeBackground(header) {
+//     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+//         header.classList.add(`navbar-color`)
+//     } else {
+//         header.classList.remove(`navbar-color`)
+//     }
+// }
 
 //..............Hid / Show description in gallery.................
 
@@ -196,4 +195,11 @@ descriptionBtn.addEventListener('click', function () {
     const des = document.querySelector('.item-des');
     // des.style.display = 'none'
     des.classList.toggle(`hide-btn`);
+
 });
+
+$(".description-btn").click(showHideDes);
+
+function showHideDes() {
+    $(".description-project").toggle(500);
+}
