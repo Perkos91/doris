@@ -59,6 +59,10 @@ body {
     margin: 15px auto;
 }
 
+.main-nav li a {
+    text-transform: uppercase;
+}
+
 
 
 .menu-toggle {
@@ -242,7 +246,7 @@ p {
     display: flex;
     position: relative;
     text-align: center;
-    z-index: -1;
+    z-index: 0;
 
 }
 
@@ -462,6 +466,7 @@ p {
 
     .information h2 {
         text-align: center;
+        padding-bottom: 50px;
     }
 
     .info-group {
