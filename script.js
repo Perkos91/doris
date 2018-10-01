@@ -9,7 +9,7 @@ navbarToggle.addEventListener('click', function () {
         mainNav.style.display = "none";
         this.classList.remove('active');
     } else {
-        mainNav.style.display = "flex";
+        mainNav.style.display = "block";
         this.classList.add('active');
 
     }
@@ -33,7 +33,7 @@ function startSlide(id) {
     sliderImages = document.querySelectorAll(`.${id}`);
     console.log(sliderImages);
     reset();
-    sliderImages[0].style.display = "flex";
+    sliderImages[0].style.display = "block";
 }
 
 // Show prev 
@@ -80,8 +80,8 @@ arrowRight.forEach(next => {
 });
 
 
+//....................Open Gallery .......................//
 
-//galery 
 const links = document.querySelectorAll('.gallery-item');
 const item = document.querySelectorAll('.port');
 const close = document.querySelectorAll('.close')
@@ -101,6 +101,7 @@ Array.from(links).forEach(link => {
             console.log(this.name)
             itemID.style.display = "flex";
             this.classList.add('active');
+            // item.classList.add('stop');
             projects.classList.add('hidde');
             startSlide(this.name);
         }
