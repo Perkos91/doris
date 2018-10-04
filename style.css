@@ -28,7 +28,6 @@ body {
     background-size: cover;
     height: 100%;
     overflow: hidden;
-    z-index: 10;
 }
 
 /* ......navigation..... */
@@ -37,6 +36,7 @@ body {
     background: rgba(255, 255, 255, .45);
     border-bottom-color: rgba(255, 255, 255, .35);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+    z-index: 1;
 }
 
 
@@ -122,11 +122,6 @@ body {
     /* position: absolute; */
     width: 100%;
     height: auto;
-}
-
-
-.name {
-    font-size: 1.5em;
 }
 
 .text-wrapper {
@@ -476,9 +471,11 @@ p {
 
     /*...............Infromation.................*/
     .information {
+
         background-color: #F4F4F6;
         padding: 120px 0 120px 0;
     }
+
 
     .information h2 {
         text-align: center;
@@ -488,57 +485,114 @@ p {
     .info-group {
         display: flex;
         padding: 12px;
+        /* position: relative; */
         justify-content: space-around;
         text-align: center;
     }
 
+    .info-line {
+        padding: 12px;
+        position: relative;
+        top: 0;
+        left: 100px;
+    }
+
+    /* 
     .info-desc {
         text-align: center;
         padding-top: 15px;
         position: relative;
-    }
+    } */
 
     /*.............................Time Line..............................*/
-    .info {
-        padding: 10px;
-        font-size: 40px;
-        text-align: center;
+    .timline {
+        position: relative;
+        max-width: 60vw;
+        margin: 0 auto;
     }
 
-    .number {
-        border-radius: 50%;
-        border: 2px solid black;
-        width: 50px;
-        height: 50px;
-        /* position: relative; */
-        margin: auto;
-        padding: 22px 0;
-        margin-top: 50px;
-        font-size: 18px;
-        line-height: 0px;
-        color: black;
-        text-align: center;
-    }
-
-    .number::before {
-        width: 0px;
-    }
-
-    .number::after {
+    .timline::after {
         content: '';
         position: absolute;
-        width: 88%;
+        width: 6px;
         background-color: black;
-        left: -44%;
-        height: 1px;
-        opacity: .45;
+        top: 0;
+        bottom: 0;
+        left: 50%;
     }
 
-    /* .number::after {
-        width: 0px;
-        height: 2px;
-        transition: width 0.5s linear;
-    } */
+    .container-timline {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container-timline::after {
+        content: '';
+
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: #333;
+        border: 2px solid;
+        border-radius: 50%;
+        z-index: 1;
+        top: 15px;
+        right: -17px;
+    }
+
+    .content {
+        padding: 10px 30px;
+        background-color: #fff;
+        position: relative;
+        border-radius: 6px;
+        top: 0;
+    }
+
+    .content h2 {
+        padding-bottom: 10px;
+    }
+
+    .icon {
+        width: 50px;
+        display: block;
+        position: relative;
+        font-size: 24px;
+        left: 0;
+        top: 0;
+    }
+
+    .contact p {
+        margin: 10px 0;
+    }
+
+    .left {
+        left: 0;
+    }
+
+    .right {
+        left: 50%;
+    }
+
+    .right::after {
+        left: -12px;
+    }
+
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+    }
 
     .about img {
         max-width: 350px;
