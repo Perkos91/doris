@@ -565,6 +565,10 @@ p {
         top: 0;
     }
 
+    .icon-right {
+        left: 90%;
+    }
+
     .contact p {
         margin: 10px 0;
     }
