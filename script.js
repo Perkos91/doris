@@ -101,6 +101,7 @@ Array.from(links).forEach(link => {
             console.log(this.name)
             itemID.style.display = "flex";
             this.classList.add('active');
+            $(".description-project").show();
             // item.classList.add('stop');
             projects.classList.add('hidde');
             startSlide(this.name);
@@ -143,7 +144,7 @@ const arrowUp = document.getElementById('arrow-up');
 
 
 function scrollUp(arrow) {
-    console.log(document.body.scrollTop)
+    // console.log(document.body.scrollTop);
     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
         arrow.style.display = "block";
     } else {
@@ -204,3 +205,5 @@ $(".description-btn").click(showHideDes);
 function showHideDes() {
     $(".description-project").toggle(500);
 }
+
+//..............................show timline .....................................//
