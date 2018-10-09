@@ -205,5 +205,3 @@ $(".description-btn").click(showHideDes);
 function showHideDes() {
     $(".description-project").toggle(500);
 }
-
-//..............................show timline .....................................//
