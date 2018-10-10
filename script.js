@@ -221,7 +221,7 @@ $(document).ready(function () {
             if (bottomOfWindow > bottomOfObject) {
                 $(this).animate({
                     'opacity': '1'
-                }, 800);
+                }, 900);
             }
         });
     });
