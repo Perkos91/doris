@@ -205,3 +205,24 @@ $(".description-btn").click(showHideDes);
 function showHideDes() {
     $(".description-project").toggle(500);
 }
+
+
+//...............................................
+$(document).ready(function () {
+
+
+    $(window).scroll(function () {
+        $('.content').each(function (i) {
+            var bottomOfObject = $(this).offset().top + $(this).outerHeight();
+            var bottomOfWindow = $(window).scrollTop() + $(window).outerHeight();
+            console.log(`content ${$(this).outerHeight()}`);
+            console.log(`window ${bottomOfWindow}`)
+
+            if (bottomOfWindow > bottomOfObject) {
+                $(this).animate({
+                    'opacity': '1'
+                }, 800);
+            }
+        });
+    });
+});
