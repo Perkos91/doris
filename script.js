@@ -14,6 +14,16 @@ navbarToggle.addEventListener('click', function () {
 
     }
 });
+//................... Add active class to the current link.................//
+$("document").ready(function (e) {
+    $(".nav-links").click(function (e) {
+        $(".nav-links").removeClass('active-link');
+        $(this).addClass('active-link');
+    })
+})
+
+
+
 /*...........Slide Gallery.....................*/
 let sliderImages = document.querySelectorAll(".cell");
 let arrowLeft = document.querySelectorAll(".prev");
