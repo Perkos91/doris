@@ -19,6 +19,10 @@ body {
     justify-content: center;
 }
 
+.row {
+    width: 1200px;
+    margin: auto;
+}
 
 
 
@@ -358,158 +362,53 @@ p {
 
 /*.....................Infromation......................*/
 .information {
-    background-color: #F4F4F6;
-    padding: 120px 0 120px 0;
-}
-
-
-.information h2 {
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.info-group {
-    display: flex;
-    padding: 12px;
-    /* position: relative; */
-    justify-content: space-around;
-    text-align: center;
-}
-
-.info-line {
-    padding: 12px;
-    position: relative;
-    top: 0;
-    left: 100px;
-}
-
-/*.............................Time Line..............................*/
-.timline {
-    position: relative;
-    max-width: 60vw;
-    margin: 0 auto;
-}
-
-.timline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: black;
-    top: 0;
-    bottom: 0;
-    /* left: 50%; */
-    left: 31px;
-}
-
-.container-timline {
-    /* padding: 10px 40px; */
-    padding-left: 70px;
-    padding-right: 25px;
-    position: relative;
-    background-color: inherit;
-    /* width: 50%; */
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.container-timline::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: #3B3A38;
-    border: 2px solid;
-    border-radius: 50%;
-    z-index: 1;
-    top: 15px;
-    right: -17px;
-}
-
-.container-timline::before {
-    left: 60px;
-}
-
-.content {
-    padding: 20px 30px;
     background-color: #fff;
-    position: relative;
-    /* border-top: 8px solid black; */
-    border-radius: 6px;
-    top: 0;
-    left: 0;
-    margin: 10px 0;
-    opacity: 0;
+    padding: 120px 0;
+}
+
+.info-grid {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
+    cursor: pointer;
 }
 
-.content h2 {
-    padding-bottom: 10px;
-    font-size: 28px;
+.info-item {
+    padding: 10px;
+    margin: 0 10px 0 10px;
 }
 
-.content h2::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #000;
-    transition: width 1s;
+.info-item:hover .info-desc {
+    opacity: 1;
 }
 
+.info-item h2 {
+    font-size: 24px;
+    padding-bottom: 20px;
+    padding-top: 8px;
+}
 
-
-.content:hover h2::after {
+.info-desc {
+    opacity: 0;
     width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    transition: .5s;
 }
 
-.contact p {
-    margin: 10px 0;
-}
 
-.left {
+.icon {
+    width: 70px;
+    display: block;
+    position: relative;
+    font-size: 24px;
     left: 0;
+    top: 0;
+    margin: 0 auto;
+
 }
-
-.left::after,
-.right::after {
-    left: 18px;
-}
-
-/* .right {
-    left: 50%;
-} */
-.right {
-    left: 0%;
-}
-
-/* .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
-
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-} */
-
-
 
 
 
@@ -520,7 +419,9 @@ p {
 .about {
     padding: 120px 0;
     text-align: center;
-    background-color: #fff;
+    background-color: #F4F4F6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .about h2 {
@@ -614,67 +515,19 @@ p {
 
 .contact-form form button {
     background-color: #fff;
-    width: 100%;
+    width: 40%;
 
 }
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-    background-color: #3B3A38;
+    background-color: #000;
     color: #fff;
     outline: 0;
     transition: background-color 1s linear;
 }
 
-/*..................Info grid ....................*/
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    text-align: center;
-    /* align-items: center; */
-}
 
-.info-item {
-    padding: 10px;
-    margin: 0 10px 0 10px;
-}
-
-.info-item h2 {
-    font-size: 24px;
-    padding-bottom: 20px;
-}
-
-/* .info-item h2::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #000;
-    transition: width .8s;
-}
-
-.info-item:hover~.info-item h2::after {
-    width: 100%;
-} */
-
-.info-desc {
-    width: 60%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-
-.icon {
-    width: 70px;
-    display: block;
-    position: relative;
-    font-size: 24px;
-    left: 0;
-    top: 0;
-    margin: 0 auto;
-
-}
 
 /*......................footer.....................*/
 footer {
@@ -682,6 +535,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 40px 0;
+    position: relative;
 }
 
 .logo-footer {
@@ -696,6 +550,16 @@ footer {
     height: auto;
 }
 
+.social {
+    padding: 0 0 10px 0;
+}
+
+.social-media {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 8px;
+    font-size: 20px;
+}
 
 @media only screen and (min-width: 970px) {
     .navbar {
@@ -740,9 +604,9 @@ footer {
 
 
     /*......Text.........*/
-    .description {
+    /* .description {
         padding: 0 120px;
-    }
+    } */
 
     /*......Projekty......*/
 
@@ -787,9 +651,6 @@ footer {
     }
 
     /*....Tekst.....*/
-    .description {
-        padding: 10px 20%;
-    }
 
     h2 {
         font-size: 42px;
@@ -806,35 +667,10 @@ footer {
     }
 
     /*.............................Time Line..............................*/
-    .timline::after {
-        left: 50%;
+    .info-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+
     }
-
-    .container-timline {
-        padding: 10px 40px;
-        width: 50%;
-    }
-
-    /* 
-    .container-timline::before {
-        left: 60px;
-    } */
-
-    .right {
-        left: 50%;
-    }
-
-    .left::after {
-        left: calc(100% - 12px)
-    }
-
-    .right::after {
-        left: -12px;
-    }
-
-
-
-}
 
 
 }
