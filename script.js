@@ -28,9 +28,10 @@ $("document").ready(function (e) {
 
 
 /*...........Slide Gallery.....................*/
-let sliderImages = document.querySelectorAll(".cell");
+// let sliderImages = document.querySelectorAll(".cell");
 let arrowLeft = document.querySelectorAll(".prev");
 let arrowRight = document.querySelectorAll(".next");
+let dotted;
 let current = 0;
 
 
@@ -38,22 +39,31 @@ let current = 0;
 function reset() {
     for (let i = 0; i < sliderImages.length; i++) {
         sliderImages[i].style.display = 'none';
+        dotted[i].classList.remove('active-dot');
     }
 }
 
 // Init slider 
 function startSlide(id) {
     sliderImages = document.querySelectorAll(`.${id}`);
+    dotted = document.querySelectorAll('.dot-' + id);
+    console.log(id);
     console.log(sliderImages);
+    console.log(dotted);
     reset();
     sliderImages[0].style.display = "block";
+    dotted[0].classList.add('active-dot');
 }
 
 // Show prev 
 function slideLeft() {
     reset();
     sliderImages[current - 1].style.display = "block";
+    dotted[current - 1].classList.add('active-dot');
+    console.log(sliderImages[current - 1]);
     current--;
+    console.log(dotted[current]);
+
     $(".description-project").hide(500);
 }
 
@@ -61,6 +71,7 @@ function slideLeft() {
 function slideRight() {
     reset();
     sliderImages[current + 1].style.display = "block";
+    dotted[current + 1].classList.add('active-dot');
     current++;
     $(".description-project").hide(500);
     // console.log('error')
@@ -76,7 +87,6 @@ arrowLeft.forEach(prev => {
     prev.addEventListener("click", function () {
         if (current === 0) {
             current = sliderImages.length;
-
         }
         slideLeft();
     })
@@ -132,6 +142,7 @@ close.forEach(c => {
             link.classList.remove('active');
         });
         projects.classList.remove('hidde');
+        projects.scrollIntoView();
         console.log(this);
     })
 });
