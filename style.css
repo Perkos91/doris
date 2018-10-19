@@ -151,8 +151,8 @@ body {
 /*.....................Projekty.........................*/
 .projects {
     padding: 120px 0;
-    background-color: #fff;
-    /* margin: 0 auto; */
+    background-color: #F4F4F6;
+    margin: 0 auto;
 }
 
 .heading {
@@ -170,9 +170,7 @@ body {
 
 .gallery-item {
     width: 100%;
-    /* height: 312px; */
-    /* width: 100%; */
-    /* margin: 10px; */
+    position: relative;
     text-decoration: none;
 }
 
@@ -214,7 +212,7 @@ body {
     padding: 10px;
     text-align: justify;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     margin: 0 10px;
 
 }
@@ -224,8 +222,9 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 40px;
     padding-bottom: 40px;
+    text-align: center;
 
 }
 
@@ -265,14 +264,16 @@ p {
 /*...................Project item.......................*/
 .port {
     display: none;
-    flex-direction: row;
-    padding: 120px 10px 120px 10px;
+    flex-direction: column;
+    /* padding: 120px 10px 120px 10px; */
+    padding: 50px 10px;
     justify-content: space-between;
 
 }
 
 .description-project {
-    width: 30vw;
+    width: 100%;
+    /* width: 30vw; */
     height: auto;
 }
 
@@ -280,7 +281,7 @@ p {
     align-self: flex-start;
     position: relative;
     top: 0;
-    left: -50px;
+    left: 0px;
     font-size: 35px;
     /* display: block; */
     cursor: pointer;
@@ -293,7 +294,8 @@ p {
 }
 
 .gallery-project {
-    width: calc(100% - 30vw);
+    /* width: calc(100% - 30vw); */
+    width: 100%;
     padding: 10px;
     display: flex;
     margin: auto;
@@ -305,7 +307,8 @@ p {
     position: relative;
     display: inline-block;
     height: 50px;
-    left: 95vw;
+    /* left: 95vw; */
+    left: 95%;
     top: -3vh;
     cursor: pointer;
     font-size: 30px;
@@ -661,6 +664,38 @@ footer {
     }
 
 
+    /*..................Project Item.........................*/
+    .port {
+        flex-direction: row;
+        padding: 120px 10px 120px 10px;
+
+    }
+
+    .description-project {
+        width: 30vw;
+        height: auto;
+    }
+
+    .description-btn {
+        align-self: flex-start;
+        position: relative;
+        top: 0;
+        left: -50px;
+        font-size: 35px;
+        /* display: block; */
+        cursor: pointer;
+    }
+
+    .gallery-project {
+        width: calc(100% - 30vw);
+
+    }
+
+    .close {
+        left: 95vw;
+    }
+
+
     /* #arrow-up {
         display: none;
         position: fixed;
@@ -715,6 +750,8 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
 
     }
+
+
 
 
 }

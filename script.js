@@ -164,30 +164,30 @@ $(document).ready(function () {
 
 //............Arrrow up......................
 
-const arrowUp = document.getElementById('arrow-up');
+// const arrowUp = document.getElementById('arrow-up');
 
 
-function scrollUp(arrow) {
-    // console.log(document.body.scrollTop);
-    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-        arrow.style.display = "block";
-    } else {
-        arrow.style.display = "none";
-    }
-}
+// function scrollUp(arrow) {
+//     // console.log(document.body.scrollTop);
+//     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+//         arrow.style.display = "block";
+//     } else {
+//         arrow.style.display = "none";
+//     }
+// }
 
-$("#arrow-up").click(function (e) {
-    console.log("work")
-    $('body, html').animate({
-        scrollTop: 0
-    }, 1000);
-    return false;
-});
+// $("#arrow-up").click(function (e) {
+//     console.log("work")
+//     $('body, html').animate({
+//         scrollTop: 0
+//     }, 1000);
+//     return false;
+// });
 
-window.onscroll = function () {
-    scrollUp(arrowUp);
-    // changeBackground(hederColor);
-};
+// window.onscroll = function () {
+//     scrollUp(arrowUp);
+//     // changeBackground(hederColor);
+// };
 
 
 // // ...........Show / Hide background nav..............
