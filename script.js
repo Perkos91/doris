@@ -190,7 +190,7 @@ $(document).ready(function () {
 // };
 
 
-// // ...........Show / Hide background nav..............
+// ...........Show / Hide background nav..............
 // const hederColor = document.querySelector('.navbar');
 
 // function changeBackground(header) {
@@ -201,7 +201,7 @@ $(document).ready(function () {
 //     }
 // }
 
-//..............Hid / Show description in gallery.................
+// ..............Hid / Show description in gallery.................
 
 
 // $(document).ready(function () {

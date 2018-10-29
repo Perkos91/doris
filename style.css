@@ -20,12 +20,7 @@ body {
 }
 
 
-.row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    padding: 0 120px;
-}
+
 
 .achievements {
     height: 200px;
@@ -154,6 +149,8 @@ body {
     padding: 120px 0;
     background-color: #F4F4F6;
     margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .heading {
@@ -213,7 +210,7 @@ body {
     padding: 10px;
     text-align: justify;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     margin: 0 10px;
 
 }
@@ -279,14 +276,9 @@ p {
 }
 
 .description-btn {
-    align-self: flex-start;
-    position: relative;
-    top: 0;
-    left: 0px;
-    font-size: 35px;
-    /* display: block; */
-    cursor: pointer;
+    display: none;
 }
+
 
 .item-header {
     padding-bottom: 5px;
@@ -466,6 +458,17 @@ p {
 
 
 /*.....O nas......*/
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    /* padding: 0 120px; */
+}
+
+.row .image img {
+    width: 100%;
+}
+
 .about {
     padding: 120px 0;
     text-align: center;
@@ -667,7 +670,8 @@ footer {
 
 
     .gallery-item {
-        width: 500px;
+        width: 32%;
+        flex-grow: 1;
     }
 
 
@@ -685,12 +689,12 @@ footer {
     }
 
     .description-btn {
+        display: block;
         align-self: flex-start;
         position: relative;
         top: 0;
         left: -50px;
         font-size: 35px;
-        /* display: block; */
         cursor: pointer;
     }
 
