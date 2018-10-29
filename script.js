@@ -127,7 +127,10 @@ Array.from(links).forEach(link => {
             $(".description-project").show();
             // item.classList.add('stop');
             projects.classList.add('hidde');
-            startSlide(this.name);
+            console.log(window.width);
+            if (window.innerWidth > 1024) {
+                startSlide(this.name)
+            }
         }
     })
 });
