@@ -431,7 +431,7 @@ p {
 }
 
 .info-desc {
-    opacity: 0;
+    opacity: 1;
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -681,6 +681,16 @@ footer {
     .gallery-item {
         width: 32%;
         flex-grow: 1;
+    }
+
+
+    /*.........................Information...............................*/
+    .info-desc {
+        opacity: 0;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        /* transition: .5s; */
     }
 
 
