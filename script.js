@@ -255,7 +255,7 @@ function showHideDes() {
 // });
 
 /*.................................Card slide flip...............................*/
-const card = document.querySelector('.card');
-card.addEventListener('click', function () {
-    card.classList.toggle('is-flipped');
-})
+// const card = document.querySelector('.card');
+// card.addEventListener('click', function () {
+//     card.classList.toggle('is-flipped');
+// })

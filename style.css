@@ -729,7 +729,7 @@ footer {
         padding: 10px;
     }
 
-    .card.is-flipped {
+    .card:hover {
         transform: rotateY(180deg);
         transform: translate(-100%) rotateY(-180deg)
     }
