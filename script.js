@@ -44,23 +44,20 @@ $(document).ready(function () {
 $(window).scroll(function () {
     var scrollDistance = $(window).scrollTop();
 
-    // Show/hide menu on scroll
-    //if (scrollDistance >= 850) {
-    //		$('nav').fadeIn("fast");
-    //} else {
-    //		$('nav').fadeOut("fast");
-    //}
 
     // Assign active class to nav links while scolling
     $('section').each(function (i) {
-        if ($(this).position().top <= scrollDistance) {
+        if (($(this).offset().top + this.clientHeight) <= scrollDistance + 10) {
+            console.log(`this position ${$(this).position().top}`)
+            console.log(scrollDistance)
+            console.log(`${$(this).innerHeight()}`)
             $('.main-nav a.active-link').removeClass('active-link');
             $('.main-nav a').eq(i).addClass('active-link');
         }
     });
 }).scroll();
 
-$(window).scroll(); //ensure if you're in current position when page is refreshed
+//ensure if you're in current position when page is refreshed
 //...................Active class for information .........................//
 
 
@@ -161,8 +158,10 @@ Array.from(links).forEach(link => {
             this.classList.remove('active');
         } else {
             console.log(this.name)
-            itemID.style.display = "flex";
-            this.classList.add('active');
+            // itemID.style.display = "flex";
+            // $('body').attr('overflow', 'hidden');
+            itemID.classList.add('active');
+            // this.classList.add('active');
             $(".description-project").show();
             // item.classList.add('stop');
             projects.classList.add('hidde');
@@ -191,17 +190,17 @@ close.forEach(c => {
 
 //..............Smooth Scrolling....................
 
-$(document).ready(function () {
-    const scrollLink = $('.scroll');
-    // Smooth scrolling
+// $(document).ready(function () {
+//     const scrollLink = $('.scroll');
+//     // Smooth scrolling
 
-    scrollLink.click(function (e) {
-        e.preventDefault();
-        $('body, html').animate({
-            scrollTop: $(this.hash).offset().top
-        }, 1000)
-    })
-})
+//     scrollLink.click(function (e) {
+//         e.preventDefault();
+//         $('body, html').animate({
+//             scrollTop: $(this.hash).offset().top
+//         }, 1000)
+//     })
+// })
 
 
 //............Arrrow up......................
