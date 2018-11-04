@@ -59,14 +59,7 @@ $(window).scroll(function () {
         }
     });
 }).scroll();
-// $(window).scroll(function (event) {
-//     var scroll = $(window).scrollTop();
-//     $('.nav-links').toggleClass('active-link',
-//         //add 'ok' class when div position match or exceeds else remove the 'ok' class.
-//         scroll >= $('#jakpracujemy').offset().top
-//     );
-// });
-//trigger the scroll
+
 $(window).scroll(); //ensure if you're in current position when page is refreshed
 //...................Active class for information .........................//
 
