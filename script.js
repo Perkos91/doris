@@ -15,12 +15,12 @@ navbarToggle.addEventListener('click', function () {
     }
 });
 //................... Add active class to the current link.................//
-$("document").ready(function (e) {
-    $(".nav-links").click(function (e) {
-        $(".nav-links").removeClass('active-link');
-        $(this).addClass('active-link');
-    });
-});
+// $("document").ready(function (e) {
+//     $(".nav-links").click(function (e) {
+//         $(".nav-links").removeClass('active-link');
+//         $(this).addClass('active-link');
+//     });
+// });
 
 //.................Add active class to the current link in position.........//
 $(document).ready(function () {
