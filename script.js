@@ -5,6 +5,7 @@ let navbarToggle = document.querySelector('.menu-toggle');
 
 navbarToggle.addEventListener('click', function () {
 
+    $('html').css('overflow', 'auto')
     if (this.classList.contains('active')) {
         mainNav.style.display = "none";
         this.classList.remove('active');
@@ -25,6 +26,8 @@ navbarToggle.addEventListener('click', function () {
 //.................Add active class to the current link in position.........//
 $(document).ready(function () {
     $('a[href*=\\#]').bind('click', function (e) {
+
+
         e.preventDefault(); // prevent hard jump, the default behavior
 
         var target = $(this).attr("href"); // Set the target as variable

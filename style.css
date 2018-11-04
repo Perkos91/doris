@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow: hidden;
+}
+
 body {
     color: #000;
     font-family: 'Armata', sans-serif;
@@ -276,10 +280,16 @@ p {
     justify-content: space-between;
 }
 
+
+
 .description-project {
     width: 100%;
     padding: 50px 10px;
     height: auto;
+}
+
+.description-project p {
+    text-align: justify;
 }
 
 .description-btn {
