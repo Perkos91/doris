@@ -411,7 +411,7 @@ p {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    text-align: center;
+    text-align: justify;
     cursor: pointer;
 }
 
@@ -727,6 +727,7 @@ footer {
 
     .card__face--back p {
         padding: 10px;
+        text-decoration: justify;
     }
 
     .card:hover {
