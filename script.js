@@ -4,8 +4,6 @@ let mainNav = document.querySelector('.main-nav');
 let navbarToggle = document.querySelector('.menu-toggle');
 
 navbarToggle.addEventListener('click', function () {
-
-    $('html').css('overflow', 'auto')
     if (this.classList.contains('active')) {
         mainNav.style.display = "none";
         this.classList.remove('active');
@@ -294,8 +292,7 @@ function showHideDes() {
 // card.addEventListener('click', function () {
 //     card.classList.toggle('is-flipped');
 // })
-function init() {
-    $('.navbar').css('display', 'auto')
-    $('html').css('overflow', 'auto')
-
-}
+// function init() {
+//     $('.navbar').css('display', 'auto')
+//     $('html').css('overflow', 'auto')
+// }

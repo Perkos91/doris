@@ -269,6 +269,7 @@ p {
 
 /*...................Project item.......................*/
 .port {
+    background-color: #F4F4F6;
     display: none;
     flex-direction: column;
     /* padding: 120px 10px 120px 10px; */
@@ -319,6 +320,42 @@ p {
     font-size: 30px;
 }
 
+/*..............................Jak pracujemy..........................*/
+.info-desc {
+    opacity: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /* transition: .5s; */
+}
+
+.scene {
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+}
+
+
+.card__face--front h2 {
+    padding: 10px 0;
+    font-size: 26px;
+}
+
+
+
+.card__face--back p {
+    padding: 10px;
+    text-decoration: justify;
+}
+
+
 
 /*.........................galery........................*/
 .grid {
@@ -328,6 +365,7 @@ p {
     text-align: center;
     flex-direction: column;
     z-index: 0;
+    padding-bottom: 100px;
 
 }
 
@@ -465,7 +503,6 @@ p {
     left: 0;
     top: 0;
     margin: 0 auto;
-
 }
 
 
@@ -526,7 +563,9 @@ p {
 }
 
 .contact-info {
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -909,6 +948,11 @@ footer {
         background-color: #333;
     }
 
+    /*..........................Form..............................*/
+
+    .contact-info {
+        flex-direction: row;
+    }
 
 
 
