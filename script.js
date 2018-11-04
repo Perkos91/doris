@@ -156,10 +156,11 @@ Array.from(links).forEach(link => {
         if (this.classList.contains('active')) {
             itemID.style.display = "none";
             this.classList.remove('active');
+            $('html').css('overflow', 'auto')
         } else {
             console.log(this.name)
             itemID.style.display = "flex";
-            // $('body').attr('overflow', 'hidden');
+            $('html').css('overflow', 'hidden')
             // itemID.classList.add('active');
             // this.classList.add('active');
             $(".description-project").show();
@@ -175,6 +176,7 @@ Array.from(links).forEach(link => {
 close.forEach(c => {
     c.addEventListener('click', function () {
         console.log(this);
+        $('html').css('overflow', 'auto')
         item.forEach(items => {
             items.style.display = "none";
             items.classList.remove('active');
