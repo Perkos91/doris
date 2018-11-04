@@ -158,9 +158,9 @@ Array.from(links).forEach(link => {
             this.classList.remove('active');
         } else {
             console.log(this.name)
-            // itemID.style.display = "flex";
+            itemID.style.display = "flex";
             // $('body').attr('overflow', 'hidden');
-            itemID.classList.add('active');
+            // itemID.classList.add('active');
             // this.classList.add('active');
             $(".description-project").show();
             // item.classList.add('stop');

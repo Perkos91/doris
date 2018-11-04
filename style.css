@@ -87,7 +87,8 @@ body {
 }
 
 .active-link {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #E49130;
+    color: #E49130;
 }
 
 .nav-links::after {
@@ -208,6 +209,12 @@ body {
     grid-template-columns: 1fr;
     margin: 0 10px;
 
+}
+
+.akapit {
+    color: #E49130;
+    font-weight: bold;
+    font-size: 22px;
 }
 
 h1 {
@@ -513,7 +520,12 @@ p {
     padding: 0 20px;
 }
 
-.company-info ul {
+.contact-info {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info ul {
     list-style: none;
     padding: 0;
 }
@@ -522,19 +534,33 @@ p {
     padding: 1em;
 }
 
-.company-info h3,
-.company-info ul {
+.contact-info h3,
+.contact-info ul {
     text-align: center;
     margin: 0 0 1rem 0;
 }
 
-.company-info ul li {
+.contact-info ul li {
     padding: 5px;
 }
 
-.company-info h3 {
+.contact-info h3 {
     font-size: 2rem;
 }
+
+.data-info {
+    padding: 0 60px;
+}
+
+.data-info a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.data-info a:hover {
+    color: #E49130
+}
+
 
 /* .............FORM Styles..................*/
 .contact-form form {
