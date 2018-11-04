@@ -23,7 +23,7 @@ body {
 
 
 .achievements {
-    height: 200px;
+    height: 125px;
     background-color: #000;
     color: #fff;
     text-align: center;
@@ -473,9 +473,6 @@ p {
     background-color: #F4F4F6;
 }
 
-.about h2 {
-    color: #3b3a38;
-}
 
 .about p {
     padding: 0 15px;
