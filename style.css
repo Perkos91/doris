@@ -231,6 +231,10 @@ p {
     padding: 20px;
 }
 
+.contact h2 {
+    padding-bottom: 20px;
+}
+
 
 @media only screen and (max-width: 1024px) {
     .text-wrapper {
