@@ -27,7 +27,6 @@ navbarToggle.addEventListener('click', function () {
 $(document).ready(function () {
     $('a[href*=\\#]').bind('click', function (e) {
 
-
         e.preventDefault(); // prevent hard jump, the default behavior
 
         var target = $(this).attr("href"); // Set the target as variable
@@ -39,7 +38,6 @@ $(document).ready(function () {
         }, 600, function () {
             location.hash = target; //attach the hash (#jumptarget) to the pageurl
         });
-
         return false;
     });
 });
@@ -51,9 +49,6 @@ $(window).scroll(function () {
     // Assign active class to nav links while scolling
     $('section').each(function (i) {
         if (($(this).offset().top + this.clientHeight) <= scrollDistance + 10) {
-            console.log(`this position ${$(this).position().top}`)
-            console.log(scrollDistance)
-            console.log(`${$(this).innerHeight()}`)
             $('.main-nav a.active-link').removeClass('active-link');
             $('.main-nav a').eq(i).addClass('active-link');
         }
@@ -86,9 +81,6 @@ function reset() {
 function startSlide(id) {
     sliderImages = document.querySelectorAll(`.${id}`);
     dotted = document.querySelectorAll('.dot-' + id);
-    console.log(id);
-    console.log(sliderImages);
-    console.log(dotted);
     reset();
     sliderImages[0].style.display = "block";
     dotted[0].classList.add('active-dot');
@@ -159,15 +151,12 @@ Array.from(links).forEach(link => {
         if (this.classList.contains('active')) {
             itemID.style.display = "none";
             this.classList.remove('active');
-            $('html').css('overflow', 'auto')
+            // $('html').css('overflow', 'auto')
         } else {
             console.log(this.name)
             itemID.style.display = "flex";
-            $('html').css('overflow', 'hidden')
-            // itemID.classList.add('active');
-            // this.classList.add('active');
+            // $('html').css('overflow', 'hidden')
             $(".description-project").show();
-            // item.classList.add('stop');
             projects.classList.add('hidde');
             console.log(window.width);
             if (window.innerWidth > 1024) {
@@ -177,21 +166,24 @@ Array.from(links).forEach(link => {
     })
 });
 close.forEach(c => {
-    c.addEventListener('click', function () {
-        console.log(this);
-        $('html').css('overflow', 'auto')
-        item.forEach(items => {
-            items.style.display = "none";
-            items.classList.remove('active');
-        });
-        links.forEach(link => {
-            link.classList.remove('active');
-        });
-        projects.classList.remove('hidde');
-        projects.scrollIntoView();
-        console.log(this);
-    })
+    c.addEventListener('click', closeProject)
 });
+
+function closeProject() {
+    // var url = window.location.toString();
+    // console.log(url);
+    // init();
+    item.forEach(items => {
+        items.style.display = "none";
+        items.classList.remove('active');
+    });
+    links.forEach(link => {
+        link.classList.remove('active');
+    });
+    projects.classList.remove('hidde');
+    // projects.scrollIntoView();
+}
+
 
 //..............Smooth Scrolling....................
 
@@ -302,3 +294,8 @@ function showHideDes() {
 // card.addEventListener('click', function () {
 //     card.classList.toggle('is-flipped');
 // })
+function init() {
+    $('.navbar').css('display', 'auto')
+    $('html').css('overflow', 'auto')
+
+}
