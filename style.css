@@ -62,9 +62,6 @@ body {
     color: white;
 }
 
-.navbarShow {
-    display: flex;
-}
 
 .main-nav {
     list-style: none;
@@ -178,7 +175,6 @@ body {
 }
 
 .text-wrapper {
-    /* display: none; */
     position: absolute;
     top: 0;
     left: 0;
@@ -190,7 +186,7 @@ body {
     align-items: center;
     text-align: center;
     color: #fff;
-    opacity: 0;
+    opacity: 1;
 }
 
 /* #arrow-up {
@@ -559,7 +555,6 @@ p {
 .container-form {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .contact-info {
