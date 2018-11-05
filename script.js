@@ -24,7 +24,6 @@ navbarToggle.addEventListener('click', function () {
 //.................Add active class to the current link in position.........//
 $(document).ready(function () {
     $('a[href*=\\#]').bind('click', function (e) {
-
         e.preventDefault(); // prevent hard jump, the default behavior
 
         var target = $(this).attr("href"); // Set the target as variable
@@ -172,6 +171,8 @@ function closeProject() {
     // var url = window.location.toString();
     // console.log(url);
     // init();
+    document.location.href = String(document.location.href).replace("#/", "");
+    console.log(document.location.href)
     item.forEach(items => {
         items.style.display = "none";
         items.classList.remove('active');
