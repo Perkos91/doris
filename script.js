@@ -33,7 +33,7 @@ $(document).ready(function () {
         $('html, body').stop().animate({
             scrollTop: $(target).offset().top
         }, 600, function () {
-            location.hash = target; //attach the hash (#jumptarget) to the pageurl
+            // location.hash = target; //attach the hash (#jumptarget) to the pageurl
         });
         return false;
     });

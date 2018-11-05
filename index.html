@@ -658,29 +658,29 @@
                     </div>
                     <div class="contact-form">
                         <h3>Napisz do nas</h3>
-                        <form action="">
+                        <form role="form" method="POST" id="reused_form">
                             <p>
                                 <label for="">Imię</label>
-                                <input type="text" name="firstName">
+                                <input type="text" name="firstName" id="firstName">
                             </p>
                             <p>
                                 <label for="">Nazwisko</label>
-                                <input type="text" name="lastName">
+                                <input type="text" name="lastName" id="lastName">
                             </p>
                             <p>
                                 <label for="">Email</label>
-                                <input type="text" name="email">
+                                <input type="text" name="email" id="email">
                             </p>
                             <p>
                                 <label for="">Telefon</label>
-                                <input type="text" name="phone">
+                                <input type="text" name="phone" id="phone" maxlength="50">
                             </p>
                             <p class="full">
                                 <label for="">Wiadomość</label>
-                                <textarea name="message" rows="5"></textarea>
+                                <textarea name="message" id="message" rows="5" maxlength="6000"></textarea>
                             </p>
                             <p>
-                                <button>Wyślij</button>
+                                <button type="submit">Wyślij</button>
                             </p>
                         </form>
                     </div>
