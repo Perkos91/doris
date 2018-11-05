@@ -149,16 +149,17 @@ Array.from(links).forEach(link => {
         if (this.classList.contains('active')) {
             itemID.style.display = "none";
             this.classList.remove('active');
-            // $('html').css('overflow', 'auto')
         } else {
             console.log(this.name)
             itemID.style.display = "flex";
-            // $('html').css('overflow', 'hidden')
             $(".description-project").show();
-            projects.classList.add('hidde');
-            console.log(window.width);
-            if (window.innerWidth > 1024) {
+            // projects.classList.add('hidde');
+            console.log(window.innerWidth);
+            if (window.innerWidth >= 1024) {
                 startSlide(this.name)
+            } else {
+                $('.prev, .next, .grid-dot').css('display', 'none');
+
             }
         }
     })
