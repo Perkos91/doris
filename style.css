@@ -285,6 +285,10 @@ p {
     text-align: justify;
 }
 
+.description-project h2 {
+    font-size: 32px;
+}
+
 .description-btn {
     display: none;
 }
@@ -295,6 +299,8 @@ p {
     border-bottom: 2px solid;
     margin: 20px;
 }
+
+
 
 .gallery-project {
     /* width: calc(100% - 30vw); */
@@ -754,6 +760,8 @@ footer {
     }
 
 
+
+
     /*.........................Information...............................*/
     .info-desc {
         opacity: 0;
@@ -765,7 +773,7 @@ footer {
 
     .scene {
         width: 350px;
-        height: 360px;
+        height: 250px;
         perspective: 600px;
     }
 
@@ -823,6 +831,7 @@ footer {
     }
 
     .description-project {
+        min-width: 340px;
         width: 30vw;
         height: auto;
     }
@@ -885,13 +894,13 @@ footer {
     /*....Tekst.....*/
 
     h2 {
-        font-size: 42px;
+        font-size: 48px;
         padding-bottom: 40px;
         text-align: center;
     }
 
     p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .about img {
