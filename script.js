@@ -168,11 +168,9 @@ close.forEach(c => {
 });
 
 function closeProject() {
-    // var url = window.location.toString();
-    // console.log(url);
-    // init();
-    document.location.href = String(document.location.href).replace("#/", "");
-    console.log(document.location.href)
+    $('html, body').stop().animate({
+        scrollTop: $('.projects').offset().top
+    })
     item.forEach(items => {
         items.style.display = "none";
         items.classList.remove('active');
