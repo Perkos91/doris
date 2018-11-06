@@ -221,7 +221,7 @@ h1 {
     padding: 1rem 0;
 }
 
-h2 {
+section h2 {
     font-size: 40px;
     padding-bottom: 40px;
     text-align: center;
@@ -656,7 +656,6 @@ p {
 footer {
     background-color: #000;
     color: #fff;
-    text-align: center;
     padding: 40px 0;
     position: relative;
 }
@@ -893,7 +892,7 @@ footer {
 
     /*....Tekst.....*/
 
-    h2 {
+    section h2 {
         font-size: 48px;
         padding-bottom: 40px;
         text-align: center;
@@ -966,6 +965,99 @@ footer {
 
         overflow: hidden;
 
+    }
+
+    /*......................footer.....................*/
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 40px 0;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    .logo-footer {
+        width: 150px;
+        display: block;
+        margin: auto;
+        padding: 40px 10px;
+    }
+
+    .logo-footer img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .column {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        padding: 0 24px;
+        width: calc(100% / 3);
+    }
+
+    .column .menu {}
+
+    .column h2 {
+        font-size: 24px;
+    }
+
+    /*..................Footer-menu.....................*/
+    /* ......navigation..... */
+
+    .footer-main-nav {
+        list-style: none;
+    }
+
+    footer .nav-links {
+        align-self: flex-start;
+        text-decoration: none;
+        color: #fff
+    }
+
+
+    .footer-main-nav li {
+        /* text-align: center; */
+        margin: 15px auto;
+    }
+
+    .nav-links {
+        text-transform: uppercase;
+    }
+
+    .active-link {
+        border-bottom: 2px solid #E49130;
+        color: #E49130;
+    }
+
+    .nav-links::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #000;
+        transition: width .8s;
+    }
+
+    .nav-links:hover::after {
+        width: 100%;
+    }
+
+    /* .main-nav li a {
+    text-transform: uppercase;
+    border-bottom: 0px solid black;
+    transition: 1s linear;
+}
+
+.main-nav li a:hover {
+    border-bottom: 2px solid black;
+} */
+    .footer-menu {
+        color: #fff;
     }
 
 
