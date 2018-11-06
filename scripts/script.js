@@ -169,8 +169,9 @@ close.forEach(c => {
 
 function closeProject() {
     $('html, body').stop().animate({
-        scrollTop: $('.projects').offset().top
-    })
+            scrollTop: $('.projects').offset().top
+        },
+        0)
     item.forEach(items => {
         items.style.display = "none";
         items.classList.remove('active');
@@ -296,3 +297,10 @@ function showHideDes() {
 //     $('.navbar').css('display', 'auto')
 //     $('html').css('overflow', 'auto')
 // }
+
+/*......................Formularz...........................................*/
+var frmvalidator = new Validator("contactform");
+frmvalidator.addValidation("firstName", "req", "Please provide your name");
+frmvalidator.addValidation("email", "req", "Please provide your email");
+frmvalidator.addValidation("email", "email",
+    "Please enter a valid email address");
