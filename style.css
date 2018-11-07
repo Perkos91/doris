@@ -209,6 +209,18 @@ body {
     padding: 20px;
 }
 
+.polityka li {
+    padding: 3px;
+}
+
+.nested {
+    margin-left: 25px;
+}
+
+.polityka ol li {
+    margin-left: 30px;
+}
+
 .polityka>* {
     text-align: justify;
 }
@@ -1024,7 +1036,7 @@ footer {
         flex-direction: column;
         padding: 0 24px;
         /* background-color: #333; */
-        width: calc(100% / 3);
+        width: calc(100% / 2);
     }
 
     .column.menu {
@@ -1045,10 +1057,10 @@ footer {
         list-style: none;
     }
 
-    footer .nav-links {
-        align-self: flex-start;
+    .footer_nav-links {
         text-decoration: none;
-        color: #fff
+        color: #fff;
+        text-transform: uppercase;
     }
 
 
@@ -1057,31 +1069,14 @@ footer {
         margin: 15px auto;
     }
 
-    .nav-links {
-        text-transform: uppercase;
-    }
-
-    .nav-links i {
+    .footer_nav-links i {
         font-size: 25px;
     }
 
-    .active-link {
-        border-bottom: 2px solid #E49130;
+    .footer_nav-links:hover {
         color: #E49130;
     }
 
-    .nav-links::after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 2px;
-        background: #E49130;
-        transition: width .8s;
-    }
-
-    .nav-links:hover::after {
-        width: 60%;
-    }
 
     /* .main-nav li a {
     text-transform: uppercase;
