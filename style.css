@@ -202,6 +202,34 @@ body {
 }
 
 /*......................Tekst.........................*/
+
+.polityka {
+    margin: 100px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.polityka>* {
+    text-align: justify;
+}
+
+.polityka h2 {
+    text-align: center;
+    padding: 25px;
+}
+
+.polityka h3 {
+    padding: 28px 0 8px 0;
+}
+
+
+.indentation {
+    display: block;
+    text-indent: -15px;
+    margin: 0 32px;
+}
+
+
 .description {
     padding: 10px;
     text-align: justify;
@@ -969,13 +997,11 @@ footer {
 
     /*......................footer.....................*/
     footer {
-        background-color: #000;
-        color: #fff;
+        background-color: #222222;
         padding: 40px 0;
         position: relative;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
 
     }
 
@@ -997,10 +1023,16 @@ footer {
         text-align: center;
         flex-direction: column;
         padding: 0 24px;
+        /* background-color: #333; */
         width: calc(100% / 3);
     }
 
-    .column .menu {}
+    .column.menu {
+        /* background-color: #f33; */
+        text-align: left;
+        margin-left: 30px;
+    }
+
 
     .column h2 {
         font-size: 24px;
@@ -1029,6 +1061,10 @@ footer {
         text-transform: uppercase;
     }
 
+    .nav-links i {
+        font-size: 25px;
+    }
+
     .active-link {
         border-bottom: 2px solid #E49130;
         color: #E49130;
@@ -1039,12 +1075,12 @@ footer {
         display: block;
         width: 0;
         height: 2px;
-        background: #000;
+        background: #E49130;
         transition: width .8s;
     }
 
     .nav-links:hover::after {
-        width: 100%;
+        width: 60%;
     }
 
     /* .main-nav li a {
