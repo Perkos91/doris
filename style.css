@@ -664,7 +664,7 @@ p {
 }
 
 .contact-form form button,
-.contact-form form input,
+.contact-form form input[type=text],
 .contact-form form textarea {
     width: 100%;
     padding: 1em;
@@ -674,7 +674,9 @@ p {
 
 .contact-form form button {
     background-color: #fff;
-    width: 40%;
+    width: 200px;
+    font-weight: bold;
+    font-size: 18px;
 
 }
 
@@ -686,6 +688,67 @@ p {
     transition: background-color 1s linear;
 }
 
+input[type=checkbox] {
+    width: 30px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+.check {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.check span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.popover__wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.popover__content {
+    color: #000;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: -150px;
+    text-align: justify;
+    transform: translate(0, 10px);
+    background-color: rgba(255, 255, 255, .8);
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .4);
+    width: 500px;
+}
+
+.popover__content:before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    right: calc(50% - 10px);
+    top: -8px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #BFBFBF transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.check .popover__wrapper:hover+.popover__content {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    left: 300px;
+    transform: translate(0, 25px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
 
 
 /*......................footer.....................*/
