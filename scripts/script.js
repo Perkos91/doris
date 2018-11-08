@@ -27,7 +27,6 @@ $(document).ready(function () {
         e.preventDefault(); // prevent hard jump, the default behavior
 
         var target = $(this).attr("href"); // Set the target as variable
-        console.log(target);
 
         // perform animated scrolling by getting top-position of target-element and set it as scroll target
         $('html, body').stop().animate({

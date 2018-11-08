@@ -8,6 +8,7 @@
 body {
     color: #000;
     font-family: 'Armata', sans-serif;
+    overflow-x: hidden;
     /* font-weight: 400; */
     /* font-style: italic; */
 
@@ -45,7 +46,6 @@ body {
     background: url('dist/img/doris-background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
-    overflow: hidden;
 }
 
 .cytat {
@@ -146,7 +146,6 @@ body {
     background-color: #F4F4F6;
     margin: 0 auto;
     width: 100%;
-    overflow: hidden;
 }
 
 .heading {
@@ -407,7 +406,6 @@ p {
     text-align: center;
     flex-direction: column;
     /* z-index: 0; */
-    overflow: hidden;
 
 }
 
@@ -501,7 +499,6 @@ p {
 .information {
     background-color: #fff;
     padding: 120px 0;
-    overflow: hidden;
 }
 
 .info-grid {
@@ -604,7 +601,6 @@ p {
 }
 
 .contact-info {
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -694,22 +690,77 @@ p {
 
 /*......................footer.....................*/
 footer {
-    background-color: #000;
-    color: #fff;
+    background-color: #222222;
     padding: 40px 0;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
 }
+
 
 .logo-footer {
     width: 150px;
     display: block;
-    margin: auto;
     padding: 40px 10px;
 }
 
 .logo-footer img {
     width: 100%;
     height: auto;
+}
+
+.footer-main-nav {
+    list-style: none;
+}
+
+.footer_nav-links {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 18px;
+
+}
+
+
+.footer-main-nav li {
+    /* text-align: center; */
+    margin: 8px 5px;
+}
+
+.footer_nav-links i {
+    font-size: 25px;
+}
+
+.footer_nav-links:hover {
+    color: #E49130;
+}
+
+.column {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    /* background-color: #333; */
+    width: calc(100% / 2);
+}
+
+
+.column h2 {
+    font-size: 24px;
+}
+
+.column p {
+    color: #fff;
 }
 
 
@@ -992,98 +1043,6 @@ footer {
 
     .contact-info {
         flex-direction: row;
-
-        overflow: hidden;
-
     }
 
     /*......................footer.....................*/
-    footer {
-        background-color: #222222;
-        padding: 40px 0;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-    }
-
-    .logo-footer {
-        width: 150px;
-        display: block;
-        margin: auto;
-        padding: 20px 10px;
-    }
-
-    .logo-footer img {
-        width: 100%;
-        height: auto;
-    }
-
-
-    .column {
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        padding: 0 24px;
-        /* background-color: #333; */
-        width: calc(100% / 2);
-    }
-
-
-    .column h2 {
-        font-size: 24px;
-    }
-
-    /*..................Footer-menu.....................*/
-    /* ......navigation..... */
-
-    .footer-main-nav {
-        list-style: none;
-    }
-
-    .footer_nav-links {
-        text-decoration: none;
-        color: #fff;
-        text-transform: uppercase;
-    }
-
-    .social {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 18px;
-
-    }
-
-
-    .footer-main-nav li {
-        /* text-align: center; */
-        margin: 8px 5px;
-    }
-
-    .footer_nav-links i {
-        font-size: 25px;
-    }
-
-    .footer_nav-links:hover {
-        color: #E49130;
-    }
-
-
-    /* .main-nav li a {
-    text-transform: uppercase;
-    border-bottom: 0px solid black;
-    transition: 1s linear;
-}
-
-.main-nav li a:hover {
-    border-bottom: 2px solid black;
-} */
-    .footer-menu {
-        color: #fff;
-    }
-
-
-
-}
