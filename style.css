@@ -263,6 +263,7 @@ header {
 
 .description-project h2 {
     font-size: 32px;
+    text-transform: uppercase;
 }
 
 .description-btn {
