@@ -43,12 +43,16 @@ $(window).scroll(function () {
 
 
     // Assign active class to nav links while scolling
-    $('section').each(function (i) {
-        if (($(this).offset().top + this.clientHeight) <= scrollDistance + 10) {
-            $('.main-nav a.active-link').removeClass('active-link');
-            $('.main-nav a').eq(i).addClass('active-link');
-        }
-    });
+    if (window.innerWidth >= 1024) {
+        $('section').each(function (i) {
+            if (($(this).offset().top + this.clientHeight) <= scrollDistance + 10) {
+                $('.nav-links.active').removeClass('active');
+                $('.nav-links').eq(i).addClass('active');
+            } else if (scrollDistance <= 0) {
+                $('.nav-links.active').removeClass('active');
+            }
+        })
+    };
 }).scroll();
 
 //ensure if you're in current position when page is refreshed
@@ -69,7 +73,7 @@ let current = 0;
 function reset() {
     for (let i = 0; i < sliderImages.length; i++) {
         sliderImages[i].style.display = 'none';
-        dotted[i].classList.remove('active-dot');
+        dotted[i].classList.remove('active');
     }
 }
 
@@ -79,14 +83,14 @@ function startSlide(id) {
     dotted = document.querySelectorAll('.dot-' + id);
     reset();
     sliderImages[0].style.display = "block";
-    dotted[0].classList.add('active-dot');
+    dotted[0].classList.add('active');
 }
 
 // Show prev 
 function slideLeft() {
     reset();
     sliderImages[current - 1].style.display = "block";
-    dotted[current - 1].classList.add('active-dot');
+    dotted[current - 1].classList.add('active');
     console.log(sliderImages[current - 1]);
     current--;
     console.log(dotted[current]);
@@ -98,14 +102,9 @@ function slideLeft() {
 function slideRight() {
     reset();
     sliderImages[current + 1].style.display = "block";
-    dotted[current + 1].classList.add('active-dot');
+    dotted[current + 1].classList.add('active');
     current++;
     $(".description-project").hide(500);
-    // console.log('error')
-    // } else {
-    //     current = 0;
-    //     startSlide();
-    // }
 
 
 }
