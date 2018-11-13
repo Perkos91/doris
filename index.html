@@ -92,7 +92,7 @@
                     <div class="card">
                         <div class="card__face card__face--front">
                             <span class="icon icon-right">
-                                <img src="dist/img/speech-bubble.svg">
+                                <img src="dist/img/icons/speech-bubble.svg">
                             </span>
                             <h2>Spotkanie</h2>
                         </div>
@@ -111,7 +111,7 @@
                     <div class="card">
                         <div class="card__face card__face--front">
                             <span class="icon">
-                                <img src="dist/img/photo-camera.svg">
+                                <img src="dist/img/icons/photo-camera.svg">
                             </span>
                             <h2>Inwentaryzacja</h2>
                         </div>
@@ -125,7 +125,7 @@
                     <div class="card">
                         <div class="card__face card__face--front">
                             <span class="icon icon-right">
-                                <img src="dist/img/design-tool.svg">
+                                <img src="dist/img/icons/design-tool.svg">
                             </span>
                             <h2>Układ funkcjonalny</h2>
                         </div>
@@ -142,7 +142,7 @@
                     <div class="card">
                         <div class="card__face card__face--front">
                             <span class="icon icon-right">
-                                <img src="dist/img/web-design.svg">
+                                <img src="dist/img/icons/web-design.svg">
                             </span>
                             <h2>Wizualizacje</h2>
                         </div>
@@ -157,7 +157,7 @@
                     <div class="card">
                         <div class="card__face card__face--front">
                             <span class="icon icon-right">
-                                <img src="dist/img/folder.svg">
+                                <img src="dist/img/icons/folder.svg">
                             </span>
                             <h2>Dokumentacja techniczna i materiałowa</h2>
                         </div>
@@ -172,7 +172,7 @@
                     <div class="card">
                         <div class="card__face card__face--front">
                             <span class="icon icon-right">
-                                <img src="dist/img/home.svg">
+                                <img src="dist/img/icons/home.svg">
                             </span>
                             <h2>Nadzór i realizacja</h2>
                         </div>
@@ -648,17 +648,17 @@
                 </div>
                 <div class="contact-form">
                     <h3>Napisz do nas</h3>
-                    <form role="form" name="contactform" method="POST" id="contact_form" action="contact-form-handler.php">
+                    <form method="POST" name="contactform" action="contact-form-handler.php">
                         <p>
-                            <label for="">Imię</label>
+                            <label for="firstName">Imię</label>
                             <input type="text" name="firstName" id="firstName">
                         </p>
                         <p>
-                            <label for="">Nazwisko</label>
+                            <label for="lastName">Nazwisko</label>
                             <input type="text" name="lastName" id="lastName">
                         </p>
                         <p>
-                            <label for="">Email</label>
+                            <label for="email">Email</label>
                             <input type="text" name="email" id="email">
                         </p>
                         <p>
@@ -666,7 +666,7 @@
                             <input type="text" name="phone" id="phone" maxlength="50">
                         </p>
                         <p class="full">
-                            <label for="">Wiadomość</label>
+                            <label for="message">Wiadomość</label>
                             <textarea name="message" id="message" rows="5" maxlength="6000"></textarea>
                         </p>
                         <div class="check">
@@ -686,7 +686,8 @@
                             </div>
                         </div>
                         <p class="full">
-                            <button type="submit">Wyślij</button>
+                            <input type="submit" value="Submit"><br>
+                            <!-- <button type="submit">Wyślij</button> -->
                         </p>
                     </form>
                 </div>

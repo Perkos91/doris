@@ -1,14 +1,14 @@
 <?php 
 $errors = '';
 $myemail = 'damianstasiek@gmail.com';//<-----Put Your email address here.
-if(empty($_POST['name'])  || 
+if(empty($_POST['firstName'])  || 
    empty($_POST['email']) || 
    empty($_POST['message']))
 {
     $errors .= "\n Error: all fields are required";
 }
 
-$name = $_POST['name']; 
+$name = $_POST['firstName']; 
 $email_address = $_POST['email']; 
 $message = $_POST['message']; 
 
