@@ -13,13 +13,7 @@ navbarToggle.addEventListener('click', function () {
 
     }
 });
-//................... Add active class to the current link.................//
-// $("document").ready(function (e) {
-//     $(".nav-links").click(function (e) {
-//         $(".nav-links").removeClass('active-link');
-//         $(this).addClass('active-link');
-//     });
-// });
+
 
 //.................Add active class to the current link in position.........//
 $(document).ready(function () {
@@ -55,14 +49,10 @@ $(window).scroll(function () {
     };
 }).scroll();
 
-//ensure if you're in current position when page is refreshed
-//...................Active class for information .........................//
-
 
 
 
 /*...........Slide Gallery.....................*/
-// let sliderImages = document.querySelectorAll(".cell");
 let arrowLeft = document.querySelectorAll(".prev");
 let arrowRight = document.querySelectorAll(".next");
 let dotted;
@@ -91,10 +81,7 @@ function slideLeft() {
     reset();
     sliderImages[current - 1].style.display = "block";
     dotted[current - 1].classList.add('active');
-    console.log(sliderImages[current - 1]);
     current--;
-    console.log(dotted[current]);
-
     $(".description-project").hide(500);
 }
 
@@ -136,7 +123,6 @@ const item = document.querySelectorAll('.port');
 const close = document.querySelectorAll('.close')
 const projects = document.querySelector('.projects');
 
-// console.log(links);
 
 
 
@@ -178,83 +164,15 @@ function closeProject() {
         link.classList.remove('active');
     });
     projects.classList.remove('hidde');
-    // projects.scrollIntoView();
+
 }
-
-
-//..............Smooth Scrolling....................
-
-// $(document).ready(function () {
-//     const scrollLink = $('.scroll');
-//     // Smooth scrolling
-
-//     scrollLink.click(function (e) {
-//         e.preventDefault();
-//         $('body, html').animate({
-//             scrollTop: $(this.hash).offset().top
-//         }, 1000)
-//     })
-// })
-
-
-//............Arrrow up......................
-
-// const arrowUp = document.getElementById('arrow-up');
-
-
-// function scrollUp(arrow) {
-//     // console.log(document.body.scrollTop);
-//     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-//         arrow.style.display = "block";
-//     } else {
-//         arrow.style.display = "none";
-//     }
-// }
-
-// $("#arrow-up").click(function (e) {
-//     console.log("work")
-//     $('body, html').animate({
-//         scrollTop: 0
-//     }, 1000);
-//     return false;
-// });
-
-// window.onscroll = function () {
-//     scrollUp(arrowUp);
-//     // changeBackground(hederColor);
-// };
-
-
-// ...........Show / Hide background nav..............
-// const hederColor = document.querySelector('.navbar');
-
-// function changeBackground(header) {
-//     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-//         header.classList.add(`navbar-color`)
-//     } else {
-//         header.classList.remove(`navbar-color`)
-//     }
-// }
-
-// ..............Hid / Show description in gallery.................
-
-
-// $(document).ready(function () {
-//     $('.prev').click(function () {
-//         $(".des").fadeToggle(3000);
-
-//     })
-
-// });
 
 const descriptionBtn = document.querySelector('.description-btn');
 const itemDescription = document.querySelector('.item-des');
 const gallery = document.querySelector('.grid');
 
 descriptionBtn.addEventListener('click', function () {
-    console.log('work');
     const des = document.querySelector('.item-des');
-    // des.style.display = 'none'
     des.classList.toggle(`hide-btn`);
 
 });
@@ -266,39 +184,11 @@ function showHideDes() {
 }
 
 
-//....................................
-// $(document).ready(function () {
-
-
-//     $(window).scroll(function () {
-//         $('.content').each(function (i) {
-//             var bottomOfObject = $(this).offset().top + $(this).outerHeight();
-//             var bottomOfWindow = $(window).scrollTop() + $(window).outerHeight();
-//             console.log(`content ${$(this).outerHeight()}`);
-//             console.log(`window ${bottomOfWindow}`)
-
-//             if (bottomOfWindow > bottomOfObject) {
-//                 $(this).animate({
-//                     'opacity': '1'
-//                 }, 900);
-//             }
-//         });
-//     });
-// });
-
-/*.................................Card slide flip...............................*/
-// const card = document.querySelector('.card');
-// card.addEventListener('click', function () {
-//     card.classList.toggle('is-flipped');
-// })
-// function init() {
-//     $('.navbar').css('display', 'auto')
-//     $('html').css('overflow', 'auto')
-// }
 
 /*......................Formularz...........................................*/
-var frmvalidator = new Validator("contact_form");
+var frmvalidator = new Validator("contactform");
 frmvalidator.addValidation("firstName", "req", "Please provide your name");
+frmvalidator.addValidation("terms", "req", "Zaznacz checkbox");
 frmvalidator.addValidation("email", "req", "Please provide your email");
 frmvalidator.addValidation("email", "email",
     "Please enter a valid email address");

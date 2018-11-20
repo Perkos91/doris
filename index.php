@@ -648,7 +648,7 @@
                 </div>
                 <div class="contact-form">
                     <h3>Napisz do nas</h3>
-                    <form method="POST" name="contactform" action="contact-form-handler.php">
+                    <form method="POST" name="contactform" action="">
                         <p>
                             <label for="firstName">Imię</label>
                             <input type="text" name="firstName" id="firstName">
@@ -753,6 +753,55 @@
     </script>
     <script src="scripts/gen_validatorv31.js" type="text/javascript"></script>
     <script src="scripts/script.js "></script>
+    <?php 
+$errors = '';
+$myemail = 'dorisdesignservice@dorisdesignservice.cba.pl';//<-----Put Your email address here.
+if(empty($_POST['terms'])) {
+	$errors .= "\n Błąd: wszystkie pola są wymagane";
+	echo "<script>
+	alert('Nie zapoznałeś/aś się z informacją o przetwarzaniu danych');
+	</script>";
+
+}
+if(empty($_POST['firstName'])  || 
+   empty($_POST['email']) || 
+   empty($_POST['message']))
+{
+	$errors .= "\n Błąd: wszystkie pola są wymagane";
+	echo "<script>
+	alert('Nie zapoznałeś/aś się z informacją o przetwarzaniu danych');
+	</script>";
+} 
+
+
+
+$name = $_POST['firstName']; 
+$email_address = $_POST['email']; 
+$message = $_POST['message']; 
+$lastName = $_POST['lastName'];
+$phone = $_POST['phone'];
+
+if (!preg_match(
+"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
+$email_address))
+{
+    $errors .= "\n Error: Invalid email address";
+}
+
+if( empty($errors))
+{
+	$to = $myemail; 
+	$email_subject = "Wiadomość od: $name";
+	$email_body = " Here are the details:\n Imie: $name \n Nazwisko: $lastName \n numer: $phone \n Email: $email_address \n Message: \n $message"; 
+	
+	$headers = "From: $myemail\n"; 
+	$headers .= "Reply-To: $email_address";
+	
+	mail($to,$email_subject,$email_body,$headers);
+	//redirect to the 'thank you' page
+	// header('Location: contact-form-thank-you.html');
+} 
+?>
 </body>
 
 </html>
